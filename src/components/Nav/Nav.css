@@ -1,3 +1,7 @@
+.logo {
+    width: 5%;
+    height: auto;
+}
 .nav-list {
     display: flex;
     justify-content: space-around;

@@ -1,12 +1,13 @@
 import './App.css';
-
 import Nav from './components/Nav/Nav';
 import Home from './components/Home/Home';
 import About from './components/About/About';
 import Recipe from './components/Recipe/Recipe';
+import FindRecipes from './components/FindRecipes/FindRecipes';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 
-function App() {
+function App()
+{
   return (
     <Router>
       <div className="App">
@@ -14,6 +15,7 @@ function App() {
         <Switch>
           <Route path='/' exact component={Home}/>
           <Route path='/about' exact component={About}/>
+          <Route path='/find' exact component={FindRecipes}/>
           <Route path='/recipes/:name' exact component={Recipe}/>
         </Switch>
       </div>

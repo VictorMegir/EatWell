@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import {Link} from 'react-router-dom';
 
 function RandomRecipe()
 {
@@ -11,10 +12,12 @@ function RandomRecipe()
     }, [])
 
     return(
-        <div className='random-recipe'>
-            <h2 className='name'>{meal.strMeal}</h2>
-            <img className='image' src={meal.strMealThumb} alt='T_T'></img>
-        </div>
+        <Link to={`/recipes/${meal.strMeal}`}>
+            <div className='random-recipe'>
+                <h2 className='name'>{meal.strMeal}</h2>
+                <img className='image' src={meal.strMealThumb} alt='T_T'></img>
+            </div>
+        </Link>
     )
 }
 
