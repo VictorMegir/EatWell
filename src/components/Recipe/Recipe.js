@@ -4,12 +4,13 @@ import Ingredient from '../Ingredient/Ingredient';
 function Recipe({match})
 {
   const [meal, setMeal] = useState([]);
-    
-    useEffect(() => {
-      fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${match.params.name}`)
-        .then(response => response.json())
-        .then(result => setMeal(result.meals[0]));
-    });
+  const recipeName = match.params.name;
+
+  useEffect(() => {
+    fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${recipeName}`)
+      .then(response => response.json())
+      .then(result => setMeal(result.meals[0]));
+  }, [recipeName]);
 
   return(
     <div className='Recipe'>

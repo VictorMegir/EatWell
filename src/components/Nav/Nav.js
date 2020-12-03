@@ -8,9 +8,10 @@ function Nav()
         <nav className='nav'>
             <Link to='/'><img className='logo' src='logo.png' alt='T_T' /></Link>
             <ul className='nav-list'>
-                <Link to='/'><li>Home</li></Link>
-                <Link to='/find'><li>Find Recipes</li></Link>
-                <Link to='/about'><li>About</li></Link>
+                <li><Link to='/'>Home</Link></li>
+                <li><Link to='/categories'>Categories</Link></li>
+                <li><Link to='/find'>Find Recipes</Link></li>
+                <li><Link to='/about'>About</Link></li>
             </ul>
         </nav>
     );
