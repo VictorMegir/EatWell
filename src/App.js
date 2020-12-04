@@ -1,11 +1,13 @@
 import './App.css';
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
+
 import Nav from './components/Nav/Nav';
 import Home from './components/Pages/Home';
 import About from './components/Pages/About';
 import Constacts from './components/Pages/Contacts';
 import RecipeDetails from './components/Recipe/RecipeDetails';
 import CategoryDetails from './components/Category/CategoryDetails';
-import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
+import RecipesByLetterList from './components/RecipeByLetter/RecipesByLetterList';
 
 function App()
 {
@@ -19,6 +21,7 @@ function App()
           <Route path='/contacts' exact component={Constacts}/>
           <Route path='/recipes/:name' exact component={RecipeDetails}/>
           <Route path='/categories/:name' exact component={CategoryDetails} />
+          <Route path='/categories/letter/:letter' exact component={RecipesByLetterList} />
         </Switch>
       </div>
     </Router>
