@@ -16,10 +16,10 @@ function RecipesByLetterList({match})
         <div className='recipes-by-letter-list'>
             {meals.map((meal, index) => (
                 <Link to={`/recipes/${meal.strMeal}`} key={index}>
-                    <div className={`recipe-${index}`}>
-                    <img className='recipe-thumbnail' src={meal.strMealThumb} alt='T_T'/>
+                <div className={`recipe-${index}`}>
                     <div className='recipe-name'>{meal.strMeal}</div>
-                    </div>
+                    <img className='recipe-thumbnail' src={meal.strMealThumb} alt='T_T'/>
+                </div>
                 </Link>
             ))}
         </div>
