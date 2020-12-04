@@ -13,6 +13,7 @@ function AreasList()
 
     return(
         <div className='areas'>
+            <h3>Find Recipes from different Areas of the world.</h3>
             {areas.map((area, index) => (
                 <Link to={`/area/${area.strArea}`} key={index}>
                 <div className='area-name'>{area.strArea}</div>
