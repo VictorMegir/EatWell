@@ -14,6 +14,7 @@ function CategoryRecipes(props)
 
     return(
         <div className='category-recipe-list'>
+            <h3>{category} Recipes</h3>
             {recipes.map((recipe, index) => (
                 <Link to={`/recipes/${recipe.strMeal}`} key={index}>
                 <div className='category-recipe'>

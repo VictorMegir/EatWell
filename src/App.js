@@ -9,6 +9,7 @@ import RecipeDetails from './components/Recipes/RecipeDetails';
 import CategoryDetails from './components/Categories/CategoryDetails';
 import RecipesByLetterList from './components/RecipesByLetter/RecipesByLetterList';
 import IngredientDetails from './components/Ingredients/IngredientDetails';
+import AreaRecipes from './components/Areas/AreaRecipes';
 
 function App()
 {
@@ -24,6 +25,7 @@ function App()
           <Route path='/categories/:name' exact component={CategoryDetails} />
           <Route path='/categories/letter/:letter' exact component={RecipesByLetterList} />
           <Route path='/ingredients/:ingredient' exact component={IngredientDetails} />
+          <Route path='/area/:area' exact component={AreaRecipes} />
         </Switch>
       </div>
     </Router>

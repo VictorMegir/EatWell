@@ -3,6 +3,7 @@ import CategoriesList from '../Categories/CategoriesList';
 import IngredientsList from '../Ingredients/IngredientsList';
 import RandomRecipes from '../RandomRecipes/RandomRecipes';
 import RecipesByLetter from '../RecipesByLetter/RecipesByLetter';
+import AreasList from '../Areas/AreasList';
 
 function Home() 
 {
@@ -13,6 +14,7 @@ function Home()
             <RandomRecipes />
             <CategoriesList />
             <IngredientsList />
+            <AreasList />
             <RecipesByLetter />
         </div>
     )
