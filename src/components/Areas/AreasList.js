@@ -4,7 +4,6 @@ import {Link} from 'react-router-dom';
 function AreasList()
 {
     const [areas, setAreas] = useState([]);
-    console.log(areas);
 
     useEffect(() => {
         fetch('https://www.themealdb.com/api/json/v1/1/list.php?a=list')

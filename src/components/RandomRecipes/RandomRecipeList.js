@@ -1,11 +1,11 @@
 import React from 'react';
-import RandomRecipe from '../Recipes/RandomRecipe';
+import RandomRecipe from './RandomRecipe';
 
 function FindRecipes() 
 {
     return(
         <div className='find-recipes'>
-            <h2>Try out some of these recipes</h2>
+            <h3>Try out some of these recipes</h3>
             <div className='random-recipes-container'>
                 <RandomRecipe />
                 <RandomRecipe />
