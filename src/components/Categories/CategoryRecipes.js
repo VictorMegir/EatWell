@@ -1,16 +1,16 @@
 import React, {useEffect, useState} from 'react';
 import {Link} from 'react-router-dom';
 
-function CategoryRecipe(props) 
+function CategoryRecipes(props) 
 {
     const [recipes, setRecipes] = useState([]);
-    const ass = props.category;
+    const category = props.category;
 
     useEffect(() => {
-        fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?c=${ass}`)
+        fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?c=${category}`)
         .then(response => response.json())
         .then(result => setRecipes(result.meals));
-    }, [ass]);
+    }, [category]);
 
     return(
         <div className='category-recipe-list'>
@@ -26,4 +26,4 @@ function CategoryRecipe(props)
     );
 }
 
-export default CategoryRecipe;
+export default CategoryRecipes;

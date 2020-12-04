@@ -8,6 +8,7 @@ import Constacts from './components/Pages/Contacts';
 import RecipeDetails from './components/Recipes/RecipeDetails';
 import CategoryDetails from './components/Categories/CategoryDetails';
 import RecipesByLetterList from './components/RecipesByLetter/RecipesByLetterList';
+import IngredientDetails from './components/Ingredients/IngredientDetails';
 
 function App()
 {
@@ -22,6 +23,7 @@ function App()
           <Route path='/recipes/:name' exact component={RecipeDetails}/>
           <Route path='/categories/:name' exact component={CategoryDetails} />
           <Route path='/categories/letter/:letter' exact component={RecipesByLetterList} />
+          <Route path='/ingredients/:ingredient' exact component={IngredientDetails} />
         </Switch>
       </div>
     </Router>
