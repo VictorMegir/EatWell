@@ -1,8 +1,12 @@
 import React from 'react';
 import IngredientRecipes from './IngredientRecipes';
+import Page404 from '../Pages/Page404';
 
 function IngredientDetails({match, location})
 {
+    if(location.state===undefined) {
+        return(<Page404 />);
+    }
     const ingredient = location.state.ingredient;
 
     return (
