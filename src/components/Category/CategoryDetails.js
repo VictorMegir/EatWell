@@ -8,7 +8,7 @@ function Category({match, location})
         <div className='category-page'>
             <img className='category-thumbnail' src={category.strCategoryThumb} alt='T_T'/>
             <p className='category-description'>{category.strCategoryDescription}</p>
-            <CategoryRecipe category={category.strCategory}/>
+            <CategoryRecipe category={category.strCategory} />
         </div>
     );
 }

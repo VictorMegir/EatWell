@@ -12,12 +12,12 @@ function RandomRecipe()
     }, [])
 
     return(
-        <Link to={`/recipes/${meal.strMeal}`}>
-            <div className='random-recipe'>
-                <h2 className='name'>{meal.strMeal}</h2>
-                <img className='image' src={meal.strMealThumb} alt='T_T'></img>
-            </div>
-        </Link>
+        <div className='random-recipe'>
+            <Link to={`/recipes/${meal.strMeal}`}>
+            <h2 className='random-recipe-name'>{meal.strMeal}</h2>
+            <img className='random-recipe-image' src={meal.strMealThumb} alt='T_T'></img>
+            </Link>
+        </div>
     )
 }
 

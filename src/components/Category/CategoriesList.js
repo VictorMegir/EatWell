@@ -13,19 +13,19 @@ function Categories()
     
     return (
         <div className='categories'>
-        <h3 className='categories-declaration'>Categories</h3>
-        {categories.map((category, index) => (
-            <Link to={
-                {
-                    pathname: `/categories/${category.strCategory}`,
-                    state: {category}
-                }} key={index}>
-                <div className={`category-${index}`}>
-                    <img className='category-thumbnail' src={category.strCategoryThumb} alt='T_T'/>
-                    <div className='category-name'>{category.strCategory}</div>
-                </div>
-            </Link>
-        ))}
+            <h3 className='categories-declaration'>Categories</h3>
+            {categories.map((category, index) => (
+                <Link to={
+                    {
+                        pathname: `/categories/${category.strCategory}`,
+                        state: {category}
+                    }} key={index}>
+                    <div className={`category-${index}`}>
+                        <img className='category-thumbnail' src={category.strCategoryThumb} alt='T_T'/>
+                        <div className='category-name'>{category.strCategory}</div>
+                    </div>
+                </Link>
+            ))}
         </div>
     );    
 }
