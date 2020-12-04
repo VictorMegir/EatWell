@@ -5,6 +5,7 @@ function RecipesByLetter()
 {
     return (
         <div className='recipes-by-letter'>
+            <h3>Find Recipes by name</h3>
             <ul className='letter-list'>
                 <li><Link to='/categories/letter/a'>A</Link></li>
                 <li><Link to='/categories/letter/b'>B</Link></li>

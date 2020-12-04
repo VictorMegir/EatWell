@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import Ingredient from '../Ingredient/Ingredient';
+import Ingredient from '../Ingredients/Ingredient';
 
 function Recipe({match})
 {

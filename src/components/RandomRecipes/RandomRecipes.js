@@ -1,5 +1,5 @@
 import React from 'react';
-import RandomRecipe from '../Recipe/RandomRecipe';
+import RandomRecipe from '../Recipes/RandomRecipe';
 
 function FindRecipes() 
 {

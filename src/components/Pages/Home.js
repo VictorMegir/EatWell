@@ -1,7 +1,8 @@
 import React from 'react';
-import CategoriesList from '../Category/CategoriesList';
-import FindRecipes from '../FindRecipes/FindRecipes';
-import RecipesByLetter from '../RecipeByLetter/RecipesByLetter';
+import CategoriesList from '../Categories/CategoriesList';
+import IngredientsList from '../Ingredients/IngredientsList';
+import RandomRecipes from '../RandomRecipes/RandomRecipes';
+import RecipesByLetter from '../RecipesByLetter/RecipesByLetter';
 
 function Home() 
 {
@@ -9,8 +10,9 @@ function Home()
         <div className='home-page'>
             <h2>HOME</h2>
             <p className='welcome-text'>Welcome to the food site.</p>
+            <RandomRecipes />
             <CategoriesList />
-            <FindRecipes />
+            <IngredientsList />
             <RecipesByLetter />
         </div>
     )

@@ -5,9 +5,9 @@ import Nav from './components/Nav/Nav';
 import Home from './components/Pages/Home';
 import About from './components/Pages/About';
 import Constacts from './components/Pages/Contacts';
-import RecipeDetails from './components/Recipe/RecipeDetails';
-import CategoryDetails from './components/Category/CategoryDetails';
-import RecipesByLetterList from './components/RecipeByLetter/RecipesByLetterList';
+import RecipeDetails from './components/Recipes/RecipeDetails';
+import CategoryDetails from './components/Categories/CategoryDetails';
+import RecipesByLetterList from './components/RecipesByLetter/RecipesByLetterList';
 
 function App()
 {
