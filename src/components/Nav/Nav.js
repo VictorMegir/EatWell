@@ -9,22 +9,23 @@ function Nav()
 
     return(
         <nav className='nav'>
-            <Link to='/'><img className='logo' src={logo} alt='T_T' /></Link>
             <ul className='nav-list'>
                 <li><Link to='/'>Home</Link></li>
                 <li><Link to='/about'>About</Link></li>
                 <li><Link to='/contacts'>Contacts</Link></li>
                 <li>
-                    <form className='searchbar' action={`/categories/${name}`} >
+                    <form className='searchbar' action={`/recipes/${name}`} >
                         <input className='search-text' 
                             type='text' 
                             placeholder='Search for a Recipe...' 
                             value={name}
-                            onChange={e => setName(e.target.value)} />
+                            onChange={e => setName(e.target.value)} 
+                            required />
                         <input type='submit' className='search-button' value='Search'/>
                     </form>
                 </li>
             </ul>
+            <Link to='/'><img className='logo' src={logo} alt='T_T'/></Link>
         </nav>
     );
 }
