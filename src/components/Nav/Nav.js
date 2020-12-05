@@ -1,5 +1,6 @@
 import './Nav.css';
 import logo from './logo.png';
+import blurp from './blurp.png'
 import React, {useState} from 'react';
 import {Link} from 'react-router-dom';
 
@@ -25,7 +26,10 @@ function Nav()
                     </form>
                 </li>
             </ul>
-            <Link to='/'><img className='logo' src={logo} alt='T_T'/></Link>
+            <Link to='/'>
+            <img className='logo' src={logo} alt='T_T'/>
+            <img className='blurp' src={blurp} alt='T_T'/>
+            </Link>
         </nav>
     );
 }
