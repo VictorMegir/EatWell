@@ -11,6 +11,7 @@ function FeaturedRecipesList()
         'Christmas cake',
         'Banana Pancakes'
     ];
+    
     return(
         <div className='featured-recipes'>
             <h3>Featured Recipes</h3>

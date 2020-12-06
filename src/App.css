@@ -1,6 +1,19 @@
 * {
-  padding: 0;
-  margin: 0;
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
   max-width: 100%;
   height: auto;
+}
+
+.App div {
+  background-color: whitesmoke;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  color: darkred;
 }

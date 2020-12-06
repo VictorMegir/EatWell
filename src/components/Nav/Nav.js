@@ -10,11 +10,15 @@ function Nav()
 
     return(
         <nav className='nav'>
+            <Link to='/' className='logo-block'>
+            <img className='logo' src={logo} alt='T_T'/>
+            <img className='blurp' src={blurp} alt='T_T'/>
+            </Link>
             <ul className='nav-list'>
-                <li><Link to='/'>Home</Link></li>
-                <li><Link to='/about'>About</Link></li>
-                <li><Link to='/contacts'>Contacts</Link></li>
-                <li>
+                <li className='nav-item'><Link to='/'>Home</Link></li>
+                <li className='nav-item'><Link to='/about'>About</Link></li>
+                <li className='nav-item'><Link to='/contacts'>Contacts</Link></li>
+                <li className='nav-item'>
                     <form className='searchbar' action={`/recipes/${name}`} >
                         <input className='search-text' 
                             type='text' 
@@ -22,14 +26,12 @@ function Nav()
                             value={name}
                             onChange={e => setName(e.target.value)} 
                             required />
-                        <input type='submit' className='search-button' value='Search'/>
+                        <button type="submit" className='search-button'>
+                            <i class="fa fa-search"></i>
+                        </button>
                     </form>
                 </li>
             </ul>
-            <Link to='/'>
-            <img className='logo' src={logo} alt='T_T'/>
-            <img className='blurp' src={blurp} alt='T_T'/>
-            </Link>
         </nav>
     );
 }

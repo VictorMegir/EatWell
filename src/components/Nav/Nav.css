@@ -1,76 +1,93 @@
 .nav {
-  background-color: #daabab;
-  width: 100%;
-  overflow: hidden;
-}
-
-.logo {
-  width: 7vh;
-  height: auto;
-  position: relative;
-  left: 55px;
-  bottom: 20px;
-  border: 3px solid black;
-  border-radius: 20%;
-}
-
-.blurp {
-  width: 20vh;
-  height: auto;
-  position: relative;
-  left: 70px;
-  bottom: 22px;
-}
-
-.nav-list {
-  list-style: none;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-height: 12vh;
+  background-color: #afc896;
+}
+
+.logo-block {
   position: relative;
-  left: 5%;
-  top: 50px;
+  top: 2px;
 }
 
-.nav-list li {
+.logo-block .logo {
+  width: 90px;
+  border: 3px solid black;
+  border-radius: 20%;
   position: relative;
-  padding-left: 3%;
-  padding-right: 3%;
 }
 
-.nav-list li a {
-  padding-top: 3%;
-  padding-bottom: 5%;
-  padding-left: 10%;
-  padding-right: 10%;
-  border: 2px black solid;
-  border-radius: 15%;
-  text-decoration: none;
-  font-size: 20px;
-  color: black;
-  background-color: #f1eded;
-}
-
-.nav-list li form {
-  padding: 5px;
+.logo-block .blurp {
+  width: 200px;
   position: relative;
-  bottom: 10px;
+  left: 10px;
 }
 
-.nav-list li form .search-text {
-  height: 30px;
-  font-size: 20px;
+.nav-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 35%;
+  list-style: none;
 }
 
-.nav-list li form .search-button {
-  height: 35px;
-  width: 80px;
-  border: 2px black solid;
-  border-radius: 15%;
-  background-color: #f1eded;
-  font-size: 20px;
+.nav-list a {
+  color: #551ABB;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.nav-list a:hover {
+  color: darkred;
+}
+
+.nav-list .search-text {
+  width: 150px;
+  height: 25px;
+}
+
+.nav-list .search-button {
+  width: 25px;
+  height: 25px;
+}
+
+@media screen and (max-width: 1200px) {
+  .nav-list {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 860px) {
+  .nav-list {
+    width: 100%;
+  }
+  .blurp {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .logo-block .logo {
+    width: 50px;
+  }
+  .nav-list .search-text {
+    width: 100px;
+    height: 20px;
+  }
+  .nav-list .search-button {
+    height: 20px;
+    width: 20px;
+  }
+  .nav-list a {
+    font-size: 16px;
+  }
 }
 /*# sourceMappingURL=Nav.css.map */

@@ -10,7 +10,7 @@ function Home()
 {
     return(
         <div className='home-page'>
-            <h2>HOME</h2>
+            <h2>Welcome</h2>
             <p className='welcome-text'>Welcome to the food site.</p>
             <FeaturedRecipes />
             <RandomRecipes />
