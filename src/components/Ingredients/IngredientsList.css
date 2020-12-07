@@ -1,0 +1,29 @@
+.ingredient-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.ingredient-list .ingredient {
+  width: 350px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 350px;
+          flex: 1 1 350px;
+}
+
+.ingredient-list .ingredient-name {
+  text-align: center;
+}
+
+.ingredient-list .ingredient-thumbnail {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 250px;
+}
+/*# sourceMappingURL=IngredientsList.css.map */

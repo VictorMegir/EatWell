@@ -1,0 +1,22 @@
+.areas-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.areas-list .area {
+  width: 150px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 150px;
+          flex: 1 1 150px;
+}
+
+.areas-list .area-name {
+  text-align: center;
+}
+/*# sourceMappingURL=AreaList.css.map */

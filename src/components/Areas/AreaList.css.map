@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,WAAW,CAAC;EACR,OAAO,EAAE,IAAI;EACb,eAAe,EAAE,MAAM;EACvB,SAAS,EAAE,IAAI;CAUlB;;AAbD,AAKI,WALO,CAKP,KAAK,CAAC;EACF,KAAK,EAAE,KAAK;EACZ,IAAI,EAAE,SAAS;CAClB;;AARL,AAUI,WAVO,CAUP,UAAU,CAAC;EACP,UAAU,EAAE,MAAM;CACrB",
+    "sources": [
+        "AreaList.scss"
+    ],
+    "names": [],
+    "file": "AreaList.css"
+}

@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,oBAAoB,CAAC;EACjB,OAAO,EAAE,IAAI;EACb,eAAe,EAAE,YAAY;EAC7B,SAAS,EAAE,IAAI;CASlB;;AAZD,AAKI,oBALgB,CAKhB,YAAY,CAAC;EACT,UAAU,EAAE,MAAM;CACrB;;AAPL,AASI,oBATgB,CAShB,OAAO,CAAC;EACJ,IAAI,EAAE,SAAS;CAClB",
+    "sources": [
+        "Random.scss"
+    ],
+    "names": [],
+    "file": "Random.css"
+}

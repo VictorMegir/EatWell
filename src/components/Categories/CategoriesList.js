@@ -1,3 +1,4 @@
+import './CategoriesList.css';
 import React, {useEffect, useState} from 'react';
 import {Link} from 'react-router-dom';
 
@@ -14,18 +15,20 @@ function Categories()
     return (
         <div className='categories'>
             <h3 className='categories-declaration'>Categories</h3>
-            {categories.map((category, index) => (
-                <Link to={
-                    {
-                        pathname: `/categories/${category.strCategory}`,
-                        state: {category}
-                    }} key={index}>
-                    <div className={`category-${index}`}>
-                        <img className='category-thumbnail' src={category.strCategoryThumb} alt='T_T'/>
-                        <div className='category-name'>{category.strCategory}</div>
+            <div className='categories-list'>
+                {categories.map((category, index) => (
+                    <div className={`category`} key={index}>
+                        <Link to={
+                            {
+                                pathname: `/categories/${category.strCategory}`,
+                                state: {category}
+                            }}>
+                            <img className='category-thumbnail' src={category.strCategoryThumb} alt='T_T'/>
+                            <div className='category-name'>{category.strCategory}</div>
+                        </Link>
                     </div>
-                </Link>
-            ))}
+                ))}
+            </div>
         </div>
     );    
 }

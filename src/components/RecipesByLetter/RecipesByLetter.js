@@ -1,3 +1,4 @@
+import './ByLetter.css';
 import React from 'react';
 import {Link} from 'react-router-dom';
 
@@ -32,7 +33,7 @@ function RecipesByLetter()
                 <li><Link to='/categories/letter/w'>W</Link></li>
                 <li><Link to='/categories/letter/x'>X</Link></li>
                 <li><Link to='/categories/letter/y'>Y</Link></li>
-                <li><Link to='/categories/letter/z'>Z</Link></li>
+                <li className='last-element'><Link to='/categories/letter/z'>Z</Link></li>
             </ul>
         </div>
     );

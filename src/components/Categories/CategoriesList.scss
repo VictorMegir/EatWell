@@ -1,0 +1,14 @@
+.categories-list {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+
+    .category {
+        width: 250px;
+        flex: 1 1 250px;
+    }
+    
+    .category-name {
+        text-align: center;
+    }
+}

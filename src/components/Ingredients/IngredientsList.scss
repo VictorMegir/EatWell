@@ -1,0 +1,21 @@
+.ingredient-list {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+
+    .ingredient {
+        width: 350px;
+        flex: 1 1 350px;
+    }
+
+    .ingredient-name {
+        text-align: center;
+    }
+
+    .ingredient-thumbnail {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 250px;
+    }
+}

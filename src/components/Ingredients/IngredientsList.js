@@ -1,3 +1,4 @@
+import './IngredientsList.css';
 import React, {useEffect, useState} from 'react';
 import {Link} from 'react-router-dom';
 
@@ -14,18 +15,20 @@ function IngredientsList()
     return(
         <div className='ingredients'>
             <h3 className='ingredients-declaration'>Ingredients</h3>
-            {ingredients.slice(0, 10).map((ingredient, index) => (
-                <Link to={
-                    {
-                        pathname: `/ingredients/${ingredient.strIngredient}`,
-                        state: {ingredient}
-                    }} key={index}>
-                    <div className={`ingredient-${index}`}>
-                        <img className='ingredient-thumbnail' src={`https://www.themealdb.com/images/ingredients/${ingredient.strIngredient}.png`} alt='T_T'/>
-                        <div className='ingredient-name'>{ingredient.strIngredient}</div>
+            <div className='ingredient-list'>
+                {ingredients.slice(0, 10).map((ingredient, index) => (
+                    <div className='ingredient' key={index}>
+                        <Link to={
+                            {
+                                pathname: `/ingredients/${ingredient.strIngredient}`,
+                                state: {ingredient}
+                            }}>                            
+                            <img className='ingredient-thumbnail' src={`https://www.themealdb.com/images/ingredients/${ingredient.strIngredient}.png`} alt='T_T'/>
+                            <div className='ingredient-name'>{ingredient.strIngredient}</div>
+                        </Link>
                     </div>
-                </Link>
-            ))}
+                ))}
+            </div>
         </div>
     );
 }

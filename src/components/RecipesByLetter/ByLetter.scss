@@ -1,0 +1,19 @@
+.letter-list {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    flex-wrap: wrap;
+    
+    li {
+        flex: 0 1 25px;
+        &::after {
+            content: " |";
+        }
+    }
+
+    .last-element {
+        &::after {
+            content: none;
+        }
+    }
+}

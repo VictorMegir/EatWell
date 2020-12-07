@@ -1,0 +1,13 @@
+.featured-recipes-list {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+
+    .recipe-name {
+        text-align: center;
+    }
+    
+    .recipe {
+        flex: 0 1 350px;
+    }
+}

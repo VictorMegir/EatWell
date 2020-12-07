@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,gBAAgB,CAAC;EACb,OAAO,EAAE,IAAI;EACb,eAAe,EAAE,YAAY;EAC7B,SAAS,EAAE,IAAI;CAUlB;;AAbD,AAKI,gBALY,CAKZ,SAAS,CAAC;EACN,KAAK,EAAE,KAAK;EACZ,IAAI,EAAE,SAAS;CAClB;;AARL,AAUI,gBAVY,CAUZ,cAAc,CAAC;EACX,UAAU,EAAE,MAAM;CACrB",
+    "sources": [
+        "CategoriesList.scss"
+    ],
+    "names": [],
+    "file": "CategoriesList.css"
+}

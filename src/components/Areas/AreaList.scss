@@ -1,0 +1,14 @@
+.areas-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    .area {
+        width: 150px;
+        flex: 1 1 150px;
+    }
+
+    .area-name {
+        text-align: center;
+    }
+}

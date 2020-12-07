@@ -27,7 +27,7 @@ function Nav()
                             onChange={e => setName(e.target.value)} 
                             required />
                         <button type="submit" className='search-button'>
-                            <i class="fa fa-search"></i>
+                            <i className="fa fa-search"></i>
                         </button>
                     </form>
                 </li>

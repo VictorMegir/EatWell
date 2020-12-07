@@ -1,0 +1,21 @@
+.featured-recipes-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.featured-recipes-list .recipe-name {
+  text-align: center;
+}
+
+.featured-recipes-list .recipe {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 350px;
+          flex: 0 1 350px;
+}
+/*# sourceMappingURL=Featured.css.map */

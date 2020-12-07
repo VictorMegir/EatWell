@@ -1,0 +1,26 @@
+.letter-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  list-style: none;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.letter-list li {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 25px;
+          flex: 0 1 25px;
+}
+
+.letter-list li::after {
+  content: " |";
+}
+
+.letter-list .last-element::after {
+  content: none;
+}
+/*# sourceMappingURL=ByLetter.css.map */
