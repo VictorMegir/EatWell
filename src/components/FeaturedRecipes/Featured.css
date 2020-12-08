@@ -32,4 +32,8 @@
       -ms-flex: 0 1 350px;
           flex: 0 1 350px;
 }
+
+.featured-recipes-list .recipe .recipe-image {
+  border-radius: 10%;
+}
 /*# sourceMappingURL=Featured.css.map */

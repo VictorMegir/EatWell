@@ -1,7 +1,8 @@
 import React, {useEffect, useState} from 'react';
 import Ingredient from './VisibleIngredient';
+import Page404 from '../Pages/Page404';
 
-function Recipe({match})
+function Recipe({match, location})
 {
   const [meal, setMeal] = useState([]);
   const recipeName = match.params.name;
@@ -9,8 +10,13 @@ function Recipe({match})
   useEffect(() => {
     fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${recipeName}`)
       .then(response => response.json())
-      .then(result => setMeal(result.meals[0]));
+      .then(result => {
+        if(result.meals === null) return;
+        setMeal(result.meals[0])
+      })
   }, [recipeName]);
+
+  if(meal.length === 0) {return(<Page404 />)}
 
   return(
     <div className='Recipe'>

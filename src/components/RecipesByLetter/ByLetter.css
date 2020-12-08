@@ -20,8 +20,9 @@
 
 .letter-list li {
   -webkit-box-flex: 0;
-      -ms-flex: 0 1 25px;
-          flex: 0 1 25px;
+      -ms-flex: 0 1 35px;
+          flex: 0 1 35px;
+  font-size: 20px;
 }
 
 .letter-list li::after {

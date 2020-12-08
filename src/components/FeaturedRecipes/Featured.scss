@@ -23,8 +23,12 @@ $recipeWidth : 350px;
         white-space: nowrap;
         text-overflow: ellipsis;
     }
-    
+
     .recipe {
         flex: 0 1 $recipeWidth;
+
+        .recipe-image {
+            border-radius: 10%;
+        }
     }
 }

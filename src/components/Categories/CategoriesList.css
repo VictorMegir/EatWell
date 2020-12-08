@@ -26,5 +26,10 @@
 
 .categories-list .category-name {
   text-align: center;
+  font-size: 20px;
+}
+
+.categories-list .category-thumbnail {
+  border-radius: 10%;
 }
 /*# sourceMappingURL=CategoriesList.css.map */

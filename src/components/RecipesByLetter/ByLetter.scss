@@ -13,7 +13,9 @@
     flex-wrap: wrap;
     
     li {
-        flex: 0 1 25px;
+        flex: 0 1 35px;
+        font-size: 20px;
+
         &::after {
             content: " |";
         }

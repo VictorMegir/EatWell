@@ -26,5 +26,9 @@ $recipeWidth : 350px;
 
     .recipe {
         flex: 0 1 $recipeWidth;
+        
+        .recipe-image {
+            border-radius: 10%;
+        }
     }
 }
