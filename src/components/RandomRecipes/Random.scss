@@ -1,5 +1,13 @@
 $recipeWidth : 350px;
 
+.random-recipes-declaration {
+    font-size: 32px;
+    font-weight: 400;
+    text-align: center;
+    padding: 25px;
+    text-decoration: underline;
+}
+
 .random-recipes-list {
     display: flex;
     justify-content: space-evenly;
