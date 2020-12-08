@@ -1,5 +1,12 @@
 $recipeWidth : 350px;
 
+.featured-recipes-declaration {
+    font-size: 32px;
+    font-weight: 400;
+    text-align: center;
+    padding: 25px;
+}
+
 .featured-recipes-list {
     display: flex;
     justify-content: space-evenly;
@@ -7,7 +14,7 @@ $recipeWidth : 350px;
 
     .recipe-name {
         text-align: center;        
-        font-size: 26px;
+        font-size: 24px;
         font-weight: 600;
 
         width: $recipeWidth;

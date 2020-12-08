@@ -20,7 +20,7 @@ function Nav()
                 <li className='nav-item'><Link to='/contacts'>Contacts</Link></li>
                 <li className='nav-item'>
                     <form className='searchbar' action={`/recipes/${name}`} >
-                        <input className='search-text' 
+                        <input className='search-text'
                             type='text' 
                             placeholder='Search for a Recipe...' 
                             value={name}

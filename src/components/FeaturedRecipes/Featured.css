@@ -1,3 +1,10 @@
+.featured-recipes-declaration {
+  font-size: 32px;
+  font-weight: 400;
+  text-align: center;
+  padding: 25px;
+}
+
 .featured-recipes-list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -11,7 +18,7 @@
 
 .featured-recipes-list .recipe-name {
   text-align: center;
-  font-size: 26px;
+  font-size: 24px;
   font-weight: 600;
   width: 350px;
   overflow: hidden;

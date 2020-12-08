@@ -25,6 +25,7 @@
 
 .logo-block .blurp {
   width: 200px;
+  bottom: 10px;
   position: relative;
   left: 10px;
 }
@@ -37,6 +38,7 @@
       justify-content: space-around;
   width: 35%;
   list-style: none;
+  height: 15px;
 }
 
 .nav-list a {
@@ -47,6 +49,14 @@
 
 .nav-list a:hover {
   color: darkred;
+}
+
+.nav-list .searchbar {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  bottom: 5px;
 }
 
 .nav-list .search-text {
@@ -78,13 +88,16 @@
   .logo-block .logo {
     width: 50px;
   }
+  .nav-list .searchbar {
+    bottom: 3px;
+  }
   .nav-list .search-text {
     width: 100px;
     height: 20px;
   }
   .nav-list .search-button {
-    height: 20px;
     width: 20px;
+    height: 20px;
   }
   .nav-list a {
     font-size: 16px;

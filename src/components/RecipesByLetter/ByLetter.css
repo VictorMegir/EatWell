@@ -1,3 +1,10 @@
+.letter-declaration {
+  font-size: 32px;
+  font-weight: 400;
+  text-align: center;
+  padding: 25px;
+}
+
 .letter-list {
   display: -webkit-box;
   display: -ms-flexbox;

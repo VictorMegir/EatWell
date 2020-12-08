@@ -6,16 +6,16 @@ import Recipe from '../Recipes/RecipePreview';
 function FeaturedRecipesList()
 {
     const hardCodedRecipeNames = [
+        'Choc Chip Pecan Pie',
         'Sugar Pie',
         'Pumpkin Pie',
-        'Choc Chip Pecan Pie',
         'Christmas cake',
         'Banana Pancakes'
     ];
     
     return(
         <div className='featured-recipes'>
-            <div className='featured-recipes-declaration'>Featured Recipes</div>
+            <div className='featured-recipes-declaration'>Top Recipes</div>
             <div className='featured-recipes-list'>
                 <Recipe name={hardCodedRecipeNames[0]} />
                 <RandomRecipe />

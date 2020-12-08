@@ -13,7 +13,7 @@ function IngredientsList()
     }, []);
 
     return(
-        <div className='ingredients'>
+        <div className='ingredients' id='ingredients'>
             <div className='ingredients-declaration'>Ingredients</div>
             <div className='ingredient-list'>
                 {ingredients.slice(0, 10).map((ingredient, index) => (

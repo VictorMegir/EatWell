@@ -4,14 +4,17 @@
   box-sizing: border-box;
   max-width: 100%;
   height: auto;
+  font-family: 'Josefin Sans', sans-serif;
 }
 
 .App div {
   background-color: whitesmoke;
+  /*background-color: rgb(180, 220, 180);*/
 }
 
 a {
   text-decoration: none;
+  color: #551ABB;
 }
 
 a:hover {

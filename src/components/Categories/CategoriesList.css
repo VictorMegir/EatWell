@@ -1,3 +1,10 @@
+.categories-declaration {
+  font-size: 32px;
+  font-weight: 400;
+  text-align: center;
+  padding: 25px;
+}
+
 .categories-list {
   display: -webkit-box;
   display: -ms-flexbox;
