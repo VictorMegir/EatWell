@@ -15,18 +15,18 @@ function FeaturedRecipesList()
     
     return(
         <div className='featured-recipes'>
-            <h3>Featured Recipes</h3>
+            <div className='featured-recipes-declaration'>Featured Recipes</div>
             <div className='featured-recipes-list'>
-            <Recipe name={hardCodedRecipeNames[0]} />
-            <RandomRecipe />
-            <Recipe name={hardCodedRecipeNames[1]} />
-            <RandomRecipe />
-            <Recipe name={hardCodedRecipeNames[2]} />
-            <RandomRecipe />
-            <Recipe name={hardCodedRecipeNames[3]} />
-            <RandomRecipe />
-            <Recipe name={hardCodedRecipeNames[4]} />
-            <RandomRecipe />
+                <Recipe name={hardCodedRecipeNames[0]} />
+                <RandomRecipe />
+                <Recipe name={hardCodedRecipeNames[1]} />
+                <RandomRecipe />
+                <Recipe name={hardCodedRecipeNames[2]} />
+                <RandomRecipe />
+                <Recipe name={hardCodedRecipeNames[3]} />
+                <RandomRecipe />
+                <Recipe name={hardCodedRecipeNames[4]} />
+                <RandomRecipe />
             </div>
         </div>
     );

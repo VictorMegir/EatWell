@@ -14,7 +14,7 @@ function RandomRecipe()
     return(
         <div className='recipe'>
             <Link to={`/recipes/${meal.strMeal}`}>
-            <h2 className='recipe-name'>{meal.strMeal}</h2>
+            <div className='recipe-name'>{meal.strMeal}</div>
             <img className='recipe-image' src={meal.strMealThumb} alt='T_T'></img>
             </Link>
         </div>

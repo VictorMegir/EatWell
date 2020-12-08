@@ -14,7 +14,7 @@ function IngredientsList()
 
     return(
         <div className='ingredients'>
-            <h3 className='ingredients-declaration'>Ingredients</h3>
+            <div className='ingredients-declaration'>Ingredients</div>
             <div className='ingredient-list'>
                 {ingredients.slice(0, 10).map((ingredient, index) => (
                     <div className='ingredient' key={index}>

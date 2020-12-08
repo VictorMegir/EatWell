@@ -1,13 +1,22 @@
+$recipeWidth : 350px;
+
 .featured-recipes-list {
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
 
     .recipe-name {
-        text-align: center;
+        text-align: center;        
+        font-size: 26px;
+        font-weight: 600;
+
+        width: $recipeWidth;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
     }
     
     .recipe {
-        flex: 0 1 350px;
+        flex: 0 1 $recipeWidth;
     }
 }

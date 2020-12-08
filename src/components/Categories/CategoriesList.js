@@ -14,7 +14,7 @@ function Categories()
     
     return (
         <div className='categories'>
-            <h3 className='categories-declaration'>Categories</h3>
+            <div className='categories-declaration'>Categories</div>
             <div className='categories-list'>
                 {categories.map((category, index) => (
                     <div className={`category`} key={index}>

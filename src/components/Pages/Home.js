@@ -1,19 +1,19 @@
 import React from 'react';
 import CategoriesList from '../Categories/CategoriesList';
 import IngredientsList from '../Ingredients/IngredientsList';
-import RandomRecipes from '../RandomRecipes/RandomRecipeList';
+import RandomRecipesList from '../RandomRecipes/RandomRecipeList';
 import RecipesByLetter from '../RecipesByLetter/RecipesByLetter';
-import FeaturedRecipes from '../FeaturedRecipes/FeaturedRecipes';
+import FeaturedRecipesList from '../FeaturedRecipes/FeaturedRecipesList';
 import AreasList from '../Areas/AreasList';
 
 function Home() 
 {
     return(
         <div className='home-page'>
-            <h2>Welcome</h2>
+            <div className='welcome-declaration'>Welcome</div>
             <p className='welcome-text'>Welcome to the food site.</p>
-            <FeaturedRecipes />
-            <RandomRecipes />
+            <FeaturedRecipesList />
+            <RandomRecipesList />
             <CategoriesList />
             <IngredientsList />
             <AreasList />

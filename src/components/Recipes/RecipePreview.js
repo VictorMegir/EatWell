@@ -15,7 +15,7 @@ function RecipePreview(props)
     return(
         <div className='recipe'>
             <Link to={`/recipes/${props.name}`}>
-            <h2 className='recipe-name'>{props.name}</h2>
+            <div className='recipe-name'>{props.name}</div>
             <img className='recipe-image' src={thumbnail} alt='T_T'></img>
             </Link>
         </div>

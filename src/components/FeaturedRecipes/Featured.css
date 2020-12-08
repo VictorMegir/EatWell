@@ -11,6 +11,12 @@
 
 .featured-recipes-list .recipe-name {
   text-align: center;
+  font-size: 26px;
+  font-weight: 600;
+  width: 350px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .featured-recipes-list .recipe {
