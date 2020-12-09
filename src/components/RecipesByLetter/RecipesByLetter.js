@@ -6,7 +6,7 @@ function RecipesByLetter()
 {
     return (
         <div className='recipes-by-letter'>
-            <div className='letter-declaration'>Find Recipes by name</div>
+            <div className='letter-declaration'>Search Recipes by name</div>
             <ul className='letter-list'>
                 <li><Link to='/categories/letter/a'>A</Link></li>
                 <li><Link to='/categories/letter/b'>B</Link></li>

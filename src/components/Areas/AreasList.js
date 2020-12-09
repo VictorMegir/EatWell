@@ -17,7 +17,7 @@ function AreasList()
 
     return(
         <div className='areas' id='country'>
-            <div className='areas-declaration'>Find Recipes from different Areas of the world.</div>
+            <div className='areas-declaration'>Search Recipes from different Areas of the world.</div>
             <div className='areas-list'>
                 {areas.map((area, index) => (
                     <div className='area' key={index}>

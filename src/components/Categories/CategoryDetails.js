@@ -1,3 +1,4 @@
+import './CategoryDetails.css';
 import React from 'react';
 import CategoryRecipes from './CategoryRecipes';
 import Page404 from '../Pages/Page404';
@@ -12,7 +13,7 @@ function Category({match, location})
 
     return(
         <div className='category-page'>
-            <h3 className='category-name'>{category.strCategory}</h3>
+            <div className='category-name'>{category.strCategory}</div>
             <img className='category-thumbnail' src={category.strCategoryThumb} alt='T_T'/>
             <p className='category-description'>{category.strCategoryDescription}</p>
             <CategoryRecipes category={category.strCategory} />
