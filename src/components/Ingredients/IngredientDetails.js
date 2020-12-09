@@ -1,3 +1,4 @@
+import './IngredientDetails.css';
 import React from 'react';
 import IngredientRecipes from './IngredientRecipes';
 import Page404 from '../Pages/Page404';

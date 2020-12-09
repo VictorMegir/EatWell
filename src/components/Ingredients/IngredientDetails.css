@@ -1,21 +1,22 @@
-.category-name {
+.ingredient-name {
   text-align: center;
   font-size: 32px;
   padding-top: 15px;
   padding-bottom: 35px;
 }
 
-.category-thumbnail {
+.ingredient-image {
   border-radius: 10%;
+  width: 25%;
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
 
-.category-description {
-  text-align: center;
+.ingredient-description {
+  text-align: left;
   font-size: 24px;
   padding: 25px;
   padding-bottom: 35px;
 }
-/*# sourceMappingURL=CategoryDetails.css.map */
+/*# sourceMappingURL=IngredientDetails.css.map */

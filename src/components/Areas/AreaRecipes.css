@@ -1,0 +1,42 @@
+.area-recipes-declaration {
+  font-size: 32px;
+  font-weight: 400;
+  text-align: center;
+  padding-top: 15px;
+  padding-bottom: 35px;
+  text-decoration: underline;
+}
+
+.area-recipe-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding-bottom: 40px;
+}
+
+.area-recipe-list .area-recipe {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 350px;
+          flex: 0 1 350px;
+  width: 350px;
+  padding-bottom: 20px;
+}
+
+.area-recipe-list .area-recipe .area-recipe-name {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 600;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.area-recipe-list .area-recipe .area-recipe-image {
+  border-radius: 10%;
+}
+/*# sourceMappingURL=AreaRecipes.css.map */

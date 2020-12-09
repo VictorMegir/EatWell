@@ -1,3 +1,4 @@
+import './AreaRecipes.css';
 import React, { useEffect, useState } from 'react';
 import {Link} from 'react-router-dom';
 import Page404 from '../Pages/Page404';
@@ -18,14 +19,18 @@ function AreaRecipes({match})
     };
 
     return(
-        <div className='area-page'>
-            <h3>{area} Recipes</h3>
-            {recipes.map((recipe, index) => (
-                <Link to={`/recipes/${recipe.strMeal}`} key={index}>
-                <div className='area-recipe-name'>{recipe.strMeal}</div>
-                <img className='area-recipe-image' src={recipe.strMealThumb} alt='T_T' />
-                </Link>
-            ))}
+        <div className='area-recipes'>
+            <div className='area-recipes-declaration'>{area} Recipes</div>
+            <div className='area-recipe-list'>
+                {recipes.slice(0,10).map((recipe, index) => (
+                    <div className='area-recipe' key={index}>
+                        <Link to={`/recipes/${recipe.strMeal}`}>
+                        <div className='area-recipe-name'>{recipe.strMeal}</div>
+                        <img className='area-recipe-image' src={recipe.strMealThumb} alt='T_T' />
+                        </Link>
+                    </div>
+                ))}
+            </div>
         </div>
 
     );

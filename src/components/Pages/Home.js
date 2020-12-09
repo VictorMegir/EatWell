@@ -3,7 +3,6 @@ import React from 'react';
 import CategoriesList from '../Categories/CategoriesList';
 import IngredientsList from '../Ingredients/IngredientsList';
 import RandomRecipesList from '../RandomRecipes/RandomRecipeList';
-import RecipesByLetter from '../RecipesByLetter/RecipesByLetter';
 import FeaturedRecipesList from '../FeaturedRecipes/FeaturedRecipesList';
 import AreasList from '../Areas/AreasList';
 
@@ -21,7 +20,6 @@ function Home()
             <CategoriesList />
             <IngredientsList />
             <AreasList />
-            <RecipesByLetter />
         </div>
     )
 }
