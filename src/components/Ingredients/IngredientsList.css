@@ -15,6 +15,7 @@
           justify-content: space-evenly;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  padding-bottom: 35px;
 }
 
 .ingredient-list .ingredient {
@@ -22,6 +23,7 @@
   -webkit-box-flex: 1;
       -ms-flex: 1 1 350px;
           flex: 1 1 350px;
+  padding-bottom: 20px;
 }
 
 .ingredient-list .ingredient-name {

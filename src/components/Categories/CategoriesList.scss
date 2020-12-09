@@ -10,10 +10,12 @@
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
+    padding-bottom: 35px;
 
     .category {
         width: 250px;
         flex: 1 1 250px;
+        padding-bottom: 20px;
     }
     
     .category-name {

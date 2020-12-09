@@ -15,6 +15,7 @@
           justify-content: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  padding-bottom: 35px;
 }
 
 .areas-list .area {
@@ -22,6 +23,7 @@
   -webkit-box-flex: 1;
       -ms-flex: 1 1 150px;
           flex: 1 1 150px;
+  padding-bottom: 20px;
 }
 
 .areas-list .area-name {

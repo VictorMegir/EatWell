@@ -1,0 +1,85 @@
+.name {
+  font-size: 32px;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 35px;
+}
+
+.image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  height: auto;
+}
+
+.info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 15px;
+  padding-bottom: 20px;
+  font-size: 20px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.info .tags {
+  padding-right: 25px;
+}
+
+.info .category {
+  padding-right: 25px;
+}
+
+.block-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-bottom: 35px;
+}
+
+.block-content .ingredient-block {
+  padding-left: 20px;
+}
+
+.block-content .ingredient-block .ingredients-declaration {
+  font-size: 32px;
+  font-weight: 400;
+  text-align: left;
+  padding: 25px;
+  text-decoration: underline;
+}
+
+.block-content .ingredient-block .ingredients {
+  font-size: 20px;
+  font-weight: 400;
+  text-align: left;
+  line-height: 1.3em;
+}
+
+.instructions-block .instructions-declation {
+  font-size: 32px;
+  font-weight: 400;
+  text-align: center;
+  padding: 25px;
+  text-decoration: underline;
+}
+
+.instructions-block .instructions {
+  font-size: 20px;
+  font-weight: 400;
+  text-align: left;
+  line-height: 1.3em;
+  width: 75%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+/*# sourceMappingURL=RecipeDetails.css.map */

@@ -15,6 +15,7 @@
           justify-content: space-evenly;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  padding-bottom: 40px;
 }
 
 .featured-recipes-list .recipe-name {
@@ -31,6 +32,7 @@
   -webkit-box-flex: 0;
       -ms-flex: 0 1 350px;
           flex: 0 1 350px;
+  padding-bottom: 20px;
 }
 
 .featured-recipes-list .recipe .recipe-image {

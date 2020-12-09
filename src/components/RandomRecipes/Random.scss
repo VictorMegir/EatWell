@@ -12,6 +12,7 @@ $recipeWidth : 350px;
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
+    padding-bottom: 35px;
 
     .recipe-name {
         text-align: center;
@@ -26,7 +27,8 @@ $recipeWidth : 350px;
 
     .recipe {
         flex: 0 1 $recipeWidth;
-        
+        padding-bottom: 20px;
+
         .recipe-image {
             border-radius: 10%;
         }
