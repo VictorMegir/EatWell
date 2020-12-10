@@ -1,0 +1,36 @@
+.contacts-page {
+    .contacts-declaration {
+        font-size: 32px;
+        font-weight: 400;
+        text-align: center;
+        padding: 25px;
+        text-decoration: underline;
+    }
+
+    div {
+        text-align: left;
+        font-size: 24px;
+        padding: 15px;
+    }
+
+    .link-images {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        right: 55px;
+
+        img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .github-image {
+            width: 40%;
+        }
+        .linkedin-image {
+            width: 35%;
+        }
+    }
+}
