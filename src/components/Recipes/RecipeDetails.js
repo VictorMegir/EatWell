@@ -1,26 +1,38 @@
 import './RecipeDetails.css';
 import React, {useEffect, useState} from 'react';
 import Ingredient from './VisibleIngredient';
+import LoadingPage from '../Pages/LoadingPage';
 import Page404 from '../Pages/Page404';
 
 function Recipe({match, location})
 {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => setLoading(false), 5000)
+  })
+
   const [meal, setMeal] = useState([]);
   const recipeName = match.params.name;
 
   useEffect(() => {
-    fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${recipeName}`)
+    fetch(`/${recipeName}`)
       .then(response => response.json())
       .then(result => {
         if(result.meals === null) return;
-        setMeal(result.meals[0])
+        setLoading(false);
+        setMeal(result.meals[0]);
       })
   }, [recipeName]);
 
-  if(meal.length === 0) {return(<Page404 />)}
+  if(meal.length === 0  && !loading) {return(<Page404 />)}
 
   return(
-    <div className='Recipe'>
+    <>
+    {loading === true ? (
+      <LoadingPage />
+    ) : (
+      <div className='Recipe' id='recipe'>
       <div className='name'>{meal.strMeal}</div>
       <div className='block-content'>
         <div className='image-block'>
@@ -62,6 +74,8 @@ function Recipe({match, location})
         <div className='instructions'>{meal.strInstructions}</div>
       </div>
     </div>
+    )}
+    </>
   );
 }
 

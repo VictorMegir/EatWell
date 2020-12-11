@@ -11,6 +11,7 @@ import RecipesByLetterList from './components/RecipesByLetter/RecipesByLetterLis
 import IngredientDetails from './components/Ingredients/IngredientDetails';
 import AreaRecipes from './components/Areas/AreaRecipes';
 import RecipesByLetter from './components/RecipesByLetter/RecipesByLetter';
+import Page404 from './components/Pages/Page404';
 
 function App()
 {
@@ -27,6 +28,7 @@ function App()
           <Route path='/categories/letter/:letter' exact component={RecipesByLetterList} />
           <Route path='/ingredients/:ingredient' exact component={IngredientDetails} />
           <Route path='/area/:area' exact component={AreaRecipes} />
+          <Route component={Page404} />
         </Switch>
         <RecipesByLetter />
       </div>
