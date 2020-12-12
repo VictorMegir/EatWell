@@ -12,8 +12,8 @@ import RecipeDetails from './components/Recipes/RecipeDetails';
 import SearchRecipes from './components/Recipes/SearchRecipes';
 import CategoryDetails from './components/Categories/CategoryDetails';
 import IngredientDetails from './components/Ingredients/IngredientDetails';
-import ByLetterRecipes from './components/RecipesByLetter/ByLetterRecipes';
-import RecipesByLetter from './components/RecipesByLetter/ByLetterList';
+import ByLetterRecipes from './components/ByLetter/ByLetterRecipes';
+import RecipesByLetter from './components/ByLetter/ByLetterList';
 import AreaRecipes from './components/Areas/AreaRecipes';
 import Page404 from './components/Pages/Page404';
 

@@ -32,7 +32,7 @@ function Recipe({match, location})
     ) : loading === true ? (
       <LoadingPage />
     ) : (
-      <div className='Recipe' id='recipe'>
+      <div className='Recipe'>
         <div className='name'>{meal.strMeal}</div>
         <div className='block-content'>
           <div className='image-block'>

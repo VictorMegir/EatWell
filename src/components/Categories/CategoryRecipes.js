@@ -16,7 +16,7 @@ function CategoryRecipes(props)
         <div className='category-recipes'>
             <div className='recipes-declaration'>{category} Recipes</div>
             <div className='recipes-list'>
-                {recipes.slice(0,10).map((recipe, index) => (
+                {recipes.slice(0, 10).map((recipe, index) => (
                     <div className='recipe' key={index}>
                         <Link to={`/recipes/${recipe.strMeal}`}>
                         <div className='recipe-name'>{recipe.strMeal}</div>

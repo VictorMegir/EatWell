@@ -1,36 +1,40 @@
 import React, { useEffect, useState } from 'react';
 import {Link} from 'react-router-dom';
-import Page404 from '../Pages/Page404';
+import NoRecipes from '../Pages/NoRecipes';
 
 function SearchRecipes({match})
 {
-    const [meals, setMeals] = useState([]);
+    const [recipes, setRecipes] = useState([]);
     const input = match.params.input;
 
     useEffect(() => {
         fetch(`/${input}`)
             .then(response => response.json())
-            .then(result => {
-                if(result.meals === null) return;
-                setMeals(result.meals)
+            .then(data => {
+                if(data.meals === null) return;
+                setRecipes(data.meals)
             });
     }, [input]);
 
-    if(meals.length === 0) {<Page404 />}
-    console.log(meals)
-    return(
+    return (
         <>
-        <div className='recipes-declaration'>Search results for {input}.</div>
-        <div className='recipes-list'>
-            {meals.map((meal, index) => (
-                <div className='recipe' key={index}>
-                    <Link to={`/recipes/${meal.strMeal}`}>
-                    <div className='recipe-name'>{meal.strMeal}</div>
-                    <img className='recipe-image' src={meal.strMealThumb} alt='T_T'/>
-                    </Link>
+        {recipes.length === 0 ? (
+            <NoRecipes />
+        ) : (
+            <div className='search-recipes'>
+                <div className='recipes-declaration search'>Search results for {input}.</div>
+                <div className='recipes-list'>
+                    {recipes.slice(0, 10).map((recipe, index) => (
+                        <div className='recipe' key={index}>
+                            <Link to={`/recipes/${recipe.strMeal}`}>
+                            <div className='recipe-name'>{recipe.strMeal}</div>
+                            <img className='recipe-image' src={recipe.strMealThumb} alt='T_T'/>
+                            </Link>
+                        </div>
+                    ))}
                 </div>
-            ))}
-        </div>
+            </div>
+        )}
         </>
     );
 }

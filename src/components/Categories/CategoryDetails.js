@@ -5,7 +5,7 @@ import Page404 from '../Pages/Page404';
 
 function Category({match, location})
 {
-    if(location.state===undefined) {
+    if(location.state === undefined) {
         return(<Page404 />);
     }
 

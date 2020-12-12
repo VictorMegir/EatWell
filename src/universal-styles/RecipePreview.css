@@ -6,6 +6,10 @@
   text-decoration: underline;
 }
 
+.search {
+  text-decoration: none;
+}
+
 .recipes-list {
   display: -webkit-box;
   display: -ms-flexbox;

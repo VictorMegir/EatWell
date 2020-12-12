@@ -22,9 +22,9 @@ function RecipesByLetterList({match})
             <NoRecipes />
         ) : (
             <div className='letter-recipes'>
-                <div className='recipes-declaration'>Recipes starting with the letter {letter.toUpperCase()}</div>
+                <div className='recipes-declaration search'>Recipes starting with the letter {letter.toUpperCase()}</div>
                 <div className='recipes-list'>
-                    {meals.slice(0,10).map((meal, index) => (
+                    {meals.slice(0, 10).map((meal, index) => (
                         <div className='recipe' key={index}>
                             <Link to={`/recipes/${meal.strMeal}`}>
                             <div className={`recipe-${index}`}>

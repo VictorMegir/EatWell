@@ -16,7 +16,7 @@ function IngredientRecipes(props)
         <div className='ingredients-recipes'>
             <div className='recipes-declaration'>Recipes containing {ingredient}</div>
             <div className='recipes-list'>
-                {recipes.slice(0,10).map((recipe, index) => (
+                {recipes.slice(0, 10).map((recipe, index) => (
                     <div className='recipe' key={index}>
                         <Link to={`/recipes/${recipe.strMeal}`}>
                         <div className='recipe-name'>{recipe.strMeal}</div>
