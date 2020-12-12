@@ -1,17 +1,10 @@
-.letter-declaration {
-    font-size: 32px;
-    font-weight: 400;
-    text-align: center;
-    padding: 25px;
-    text-decoration: underline;
-}
+@import '../../../universal-styles/DetailsMixins';
 
-.letter-list {
-    display: flex;
-    justify-content: center;
+.letter-declaration {@include declaration();}
+.letter-list 
+{
+    @include flex-config();
     list-style: none;
-    flex-wrap: wrap;
-    padding-bottom: 35px;
     
     li {
         flex: 0 1 35px;
