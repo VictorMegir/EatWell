@@ -1,21 +1,5 @@
-.ingredient-name {
-    text-align: center;
-    font-size: 32px;
-    padding-top: 15px;
-    padding-bottom: 35px;
-}
+@import '../../../universal-styles/DetailsMixins';
 
-.ingredient-image {
-    border-radius: 10%;
-    width: 25%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.ingredient-description {
-    text-align: left;
-    font-size: 24px;
-    padding: 25px;
-    padding-bottom: 35px;
-}
+.ingredient-name {@include name();}
+.ingredient-image {@include image(25%);}
+.ingredient-description {@include description(left);}

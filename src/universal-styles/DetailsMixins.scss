@@ -1,0 +1,24 @@
+@mixin name() 
+{
+    font-size: 32px;
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 35px;
+}
+
+@mixin image($width: auto) 
+{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10%;
+    width: $width;
+}
+
+@mixin description($text-align: center) 
+{
+    font-size: 24px;
+    text-align: $text-align;
+    padding: 25px;
+    padding-bottom: 35px;
+}

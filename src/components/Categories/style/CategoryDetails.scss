@@ -1,20 +1,5 @@
-.category-name {
-    text-align: center;
-    font-size: 32px;
-    padding-top: 15px;
-    padding-bottom: 35px;
-}
+@import '../../../universal-styles/DetailsMixins';
 
-.category-thumbnail {
-    border-radius: 10%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.category-description {
-    text-align: center;
-    font-size: 24px;
-    padding: 25px;
-    padding-bottom: 35px;
-}
+.category-name {@include name();}
+.category-thumbnail {@include image();}
+.category-description {@include description();}

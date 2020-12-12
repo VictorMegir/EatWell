@@ -1,20 +1,10 @@
-.name {
-    font-size: 32px;
-    text-align: center;
-    padding-top: 15px;
-    padding-bottom: 35px;
-}
+@use '../../../universal-styles/DetailsMixins.css';
 
-.image {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 80%;
-    height: auto;
-    border-radius: 10%;
-}
+.name {@include name();}
+.image {@include image(80%);}
 
-.info {
+.info 
+{
     display: flex;
     justify-content: center;
     padding-top: 15px;
@@ -30,47 +20,46 @@
     }
 }
 
-.block-content {
+@mixin declaration($text-align: left) 
+{
+    font-size: 32px;
+    font-weight: 400;
+    text-align: $text-align;
+    padding: 25px;
+    text-decoration: underline;
+}
+
+@mixin text()
+{
+    font-size: 20px;
+    font-weight: 400;
+    text-align: left;
+    line-height: 1.3em;
+}
+
+.block-content 
+{
     display: flex;
     justify-content: center;
     padding-bottom: 35px;
 
-    .ingredient-block {
+    .ingredient-block 
+    {
         padding-left: 20px;
 
-        .ingredients-declaration {
-            font-size: 32px;
-            font-weight: 400;
-            text-align: left;
-            padding: 25px;
-            text-decoration: underline;
-        }
-
-        .ingredients {
-            font-size: 20px;
-            font-weight: 400;
-            text-align: left;
-            line-height: 1.3em;
-        }
+        .ingredients-declaration {@include declaration();}
+        .ingredients {@include text();}
     }
 }
 
-.instructions-block {
+.instructions-block 
+{
     padding-bottom: 35px;
 
-    .instructions-declation {
-        font-size: 32px;
-        font-weight: 400;
-        text-align: center;
-        padding: 25px;
-        text-decoration: underline;
-    }
-    
-    .instructions {
-        font-size: 20px;
-        font-weight: 400;
-        text-align: left;
-        line-height: 1.3em;
+    .instructions-declation {@include declaration(center);}
+    .instructions 
+    {
+        @include text();
         width: 75%;
         display: block;
         margin-left: auto;
