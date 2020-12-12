@@ -1,4 +1,4 @@
-import './Contacts.css';
+import './style/Contacts.css';
 import github from './images/github-image.png';
 import linkedin from './images/linkedin-image.png';
 import React from 'react';

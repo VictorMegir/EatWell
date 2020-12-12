@@ -1,4 +1,4 @@
-import './About.css';
+import './style/About.css';
 import React from 'react';
 import mealdbImage from './images/TheMealDB-image.png';
 import reactImage from './images/React-image.png';

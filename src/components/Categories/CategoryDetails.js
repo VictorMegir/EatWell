@@ -1,4 +1,4 @@
-import './CategoryDetails.css';
+import './style/CategoryDetails.css';
 import React from 'react';
 import CategoryRecipes from './CategoryRecipes';
 import Page404 from '../Pages/Page404';

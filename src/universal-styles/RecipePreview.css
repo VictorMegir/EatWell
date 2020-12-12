@@ -1,13 +1,12 @@
-.letter-recipes-declaration {
+.recipes-declaration {
   font-size: 32px;
   font-weight: 400;
   text-align: center;
-  padding-top: 15px;
-  padding-bottom: 35px;
+  padding: 25px;
   text-decoration: underline;
 }
 
-.letter-recipe-list {
+.recipes-list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -16,27 +15,27 @@
           justify-content: space-evenly;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  padding-bottom: 40px;
+  padding-bottom: 35px;
 }
 
-.letter-recipe-list .letter-recipe {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 1 350px;
-          flex: 0 1 350px;
-  width: 350px;
-  padding-bottom: 20px;
-}
-
-.letter-recipe-list .letter-recipe .letter-recipe-name {
+.recipes-list .recipe-name {
   text-align: center;
   font-size: 24px;
   font-weight: 600;
+  width: 350px;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
 
-.letter-recipe-list .letter-recipe .letter-recipe-image {
+.recipes-list .recipe {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 350px;
+          flex: 0 1 350px;
+  padding-bottom: 20px;
+}
+
+.recipes-list .recipe .recipe-image {
   border-radius: 10%;
 }
-/*# sourceMappingURL=RecipesByLetterList.css.map */
+/*# sourceMappingURL=RecipePreview.css.map */

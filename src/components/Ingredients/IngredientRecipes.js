@@ -1,4 +1,3 @@
-import './IngredientRecipes.css';
 import React, {useEffect, useState} from 'react';
 import {Link} from 'react-router-dom';
 
@@ -14,16 +13,16 @@ function IngredientRecipes(props)
     }, [ingredient]);
 
     return(
-        <div className='ingredient-recipe'>
-            <div className='ingredient-recipes-declaration'>Recipes containing {ingredient}</div>
-            <div className='ingredient-recipe-list'>
+        <div className='ingredients-recipes'>
+            <div className='recipes-declaration'>Recipes containing {ingredient}</div>
+            <div className='recipes-list'>
                 {recipes.slice(0,10).map((recipe, index) => (
-                    <Link to={`/recipes/${recipe.strMeal}`} key={index}>
-                    <div className='ingredient-recipe'>
-                        <div className='ingredient-recipe-name'>{recipe.strMeal}</div>
-                        <img className='ingredient-recipe-image' src={recipe.strMealThumb} alt='T_T'/>
+                    <div className='recipe' key={index}>
+                        <Link to={`/recipes/${recipe.strMeal}`}>
+                        <div className='recipe-name'>{recipe.strMeal}</div>
+                        <img className='recipe-image' src={recipe.strMealThumb} alt='T_T'/>
+                        </Link>
                     </div>
-                    </Link>
                 ))}
             </div>
         </div>

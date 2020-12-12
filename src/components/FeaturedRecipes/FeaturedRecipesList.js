@@ -1,4 +1,3 @@
-import './Featured.css'
 import React from 'react';
 import RandomRecipe from '../RandomRecipes/RandomRecipe'
 import Recipe from '../Recipes/RecipePreview';
@@ -14,9 +13,9 @@ function FeaturedRecipesList()
     ];
     
     return(
-        <div className='featured-recipes'>
-            <div className='featured-recipes-declaration'>Top Recipes</div>
-            <div className='featured-recipes-list'>
+        <div className='recipes'>
+            <div className='recipes-declaration'>Top Recipes</div>
+            <div className='recipes-list'>
                 <Recipe name={hardCodedRecipes[0]} />
                 <RandomRecipe />
                 <Recipe name={hardCodedRecipes[1]} />

@@ -16,7 +16,7 @@ function RecipePreview(props)
         <div className='recipe'>
             <Link to={`/recipes/${props.name}`}>
             <div className='recipe-name'>{props.name}</div>
-            <img className='recipe-image' src={thumbnail} alt='T_T'></img>
+            <img className='recipe-image' src={thumbnail} alt='T_T'/>
             </Link>
         </div>
     );

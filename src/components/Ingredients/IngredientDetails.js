@@ -1,4 +1,4 @@
-import './IngredientDetails.css';
+import './style/IngredientDetails.css';
 import React from 'react';
 import IngredientRecipes from './IngredientRecipes';
 import Page404 from '../Pages/Page404';
@@ -12,7 +12,7 @@ function IngredientDetails({match, location})
 
     return (
         <div className='ingredient-page'>
-            <h3 className='ingredient-name'>{ingredient.strIngredient}</h3>
+            <div className='ingredient-name'>{ingredient.strIngredient}</div>
             <img className='ingredient-image' src={`https://www.themealdb.com/images/ingredients/${ingredient.strIngredient}.png`} alt='T_T' />
             <p className='ingredient-description'>{ingredient.strDescription}</p>
             <IngredientRecipes ingredient={ingredient.strIngredient}/>

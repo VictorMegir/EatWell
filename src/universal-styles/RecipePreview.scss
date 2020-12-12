@@ -1,6 +1,7 @@
 $recipeWidth : 350px;
 
-.random-recipes-declaration {
+.recipes-declaration 
+{
     font-size: 32px;
     font-weight: 400;
     text-align: center;
@@ -8,13 +9,15 @@ $recipeWidth : 350px;
     text-decoration: underline;
 }
 
-.random-recipes-list {
+.recipes-list 
+{
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
     padding-bottom: 35px;
 
-    .recipe-name {
+    .recipe-name 
+    {
         text-align: center;
         font-size: 24px;
         font-weight: 600;
@@ -25,7 +28,8 @@ $recipeWidth : 350px;
         text-overflow: ellipsis;
     }
 
-    .recipe {
+    .recipe 
+    {
         flex: 0 1 $recipeWidth;
         padding-bottom: 20px;
 

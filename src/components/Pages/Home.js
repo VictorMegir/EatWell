@@ -1,4 +1,4 @@
-import './Home.css';
+import './style/Home.css';
 import React from 'react';
 import CategoriesList from '../Categories/CategoriesList';
 import IngredientsList from '../Ingredients/IngredientsList';

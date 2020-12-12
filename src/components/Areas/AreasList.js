@@ -1,4 +1,4 @@
-import './AreaList.css';
+import './style/AreaList.css';
 import React, { useEffect, useState } from 'react';
 import {Link} from 'react-router-dom';
 

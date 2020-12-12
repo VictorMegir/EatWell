@@ -1,6 +1,7 @@
-import './Nav.css';
-import logo from './logo.png';
-import blurp from './blurp.png'
+import './style/Nav.css';
+import logo from './images/logo.png';
+import blurp from './images/blurp.png';
+
 import React, {useState} from 'react';
 import {Link} from 'react-router-dom';
 
@@ -19,7 +20,7 @@ function Nav()
                 <li className='nav-item'><Link to='/about'>About</Link></li>
                 <li className='nav-item'><Link to='/contacts'>Contacts</Link></li>
                 <li className='nav-item'>
-                    <form className='searchbar' action={`/recipes/${name}`} >
+                    <form className='searchbar' action={`/recipes/search/${name}`} >
                         <input className='search-text'
                             type='text' 
                             placeholder='Search for a Recipe...' 
