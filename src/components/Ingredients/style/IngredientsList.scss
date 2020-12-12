@@ -1,28 +1,19 @@
-.ingredients-declaration {
-    font-size: 32px;
-    font-weight: 400;
-    text-align: center;
-    padding: 25px;
-    text-decoration: underline;
-}
+@import '../../../universal-styles/ListMixins';
 
-.ingredient-list {
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    padding-bottom: 35px;
+.ingredients-declaration {@include declaration();}
 
+.ingredient-list 
+{
+    @include flex-config(space-evenly);
     .ingredient {
         width: 350px;
         flex: 1 1 350px;
         padding-bottom: 20px;
     }
-
     .ingredient-name {
         text-align: center;
         font-size: 20px;
     }
-
     .ingredient-thumbnail {
         display: block;
         margin-left: auto;

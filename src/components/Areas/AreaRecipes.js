@@ -19,7 +19,7 @@ function AreaRecipes({match})
             <Page404 />
         ) : (
             <div className='area-recipes'>
-                <div className='recipes-declaration'>{area} Recipes</div>
+                <div className='recipes-declaration search'>{area} Recipes</div>
                 <div className='recipes-list'>
                     {recipes.slice(0,10).map((recipe, index) => (
                         <div className='recipe' key={index}>

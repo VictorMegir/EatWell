@@ -46,7 +46,6 @@
     .ingredient-block 
     {
         padding-left: 20px;
-
         .ingredients-declaration {@include declaration();}
         .ingredients {@include text();}
     }
@@ -55,7 +54,6 @@
 .instructions-block 
 {
     padding-bottom: 35px;
-
     .instructions-declation {@include declaration(center);}
     .instructions 
     {
