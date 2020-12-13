@@ -11,6 +11,9 @@ function IngredientsList()
 
     setTimeout(() => setLoading(false), 5000);
 
+    const [ingredientsNum, setIngredientsNum] = useState(10);
+    const moreIngredientsHandler = () => setIngredientsNum(ingredientsNum + 10);
+
     useEffect(() => {
         fetch(`/api/ingredients/list`)
             .then(response => response.json())
@@ -31,7 +34,7 @@ function IngredientsList()
             <div className='ingredients' id='ingredients'>
                 <div className='ingredients-declaration'>Search by Ingredient</div>
                 <div className='ingredient-list'>
-                    {ingredients.slice(0, 10).map((ingredient, index) => (
+                    {ingredients.slice(0, ingredientsNum).map((ingredient, index) => (
                         <div className='ingredient' key={index}>
                             <Link to={
                                 {
@@ -44,6 +47,13 @@ function IngredientsList()
                         </div>
                     ))}
                 </div>
+                {ingredients.length > ingredientsNum ? (
+                    <div className='button-container'>
+                        <button className='button' onClick={moreIngredientsHandler}>More Ingredients</button>
+                    </div>
+                ) : (
+                    <></>
+                )}
             </div>
         )}
         </>

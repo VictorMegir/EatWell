@@ -7,9 +7,12 @@ function IngredientRecipes(props)
 {
     const ingredient = props.ingredient;
     const [recipes, setRecipes] = useState([]);
+    
     const [loading, setLoading] = useState(true);
-
     setTimeout(() => setLoading(false), 5000);
+
+    const [recipeNum, setRecipeNum] = useState(10);
+    const moreRecipesHandler = () => setRecipeNum(recipeNum + 10);
 
     useEffect(() => {
         fetch(`/api/ingredients/${ingredient}`)
@@ -31,7 +34,7 @@ function IngredientRecipes(props)
             <div className='ingredients-recipes'>
                 <div className='recipes-declaration'>Recipes containing {ingredient}.</div>
                 <div className='recipes-list'>
-                    {recipes.slice(0, 10).map((recipe, index) => (
+                    {recipes.slice(0, recipeNum).map((recipe, index) => (
                         <div className='recipe' key={index}>
                             <Link to={`/recipes/${recipe.strMeal}`}>
                             <div className='recipe-name'>{recipe.strMeal}</div>
@@ -40,6 +43,13 @@ function IngredientRecipes(props)
                         </div>
                     ))}
                 </div>
+                {recipes.length > recipeNum ? (
+                    <div className='button-container'>
+                        <button className='button' onClick={moreRecipesHandler}>More Recipes</button>
+                    </div>
+                ) : (
+                    <></>
+                )}
             </div>
         )}
         </>

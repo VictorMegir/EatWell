@@ -5,11 +5,14 @@ import NoRecipes from '../Pages/NoRecipes';
 
 function SearchRecipes({match})
 {
-    const [loading, setLoading] = useState(true);
-    const [recipes, setRecipes] = useState([]);
     const input = match.params.input;
-
+    const [recipes, setRecipes] = useState([]);
+    
+    const [loading, setLoading] = useState(true);
     setTimeout(() => setLoading(false), 5000);
+
+    const [recipeNum, setRecipeNum] = useState(10);
+    const moreRecipesHandler = () => setRecipeNum(recipeNum + 10);
 
     useEffect(() => {
         fetch(`/api/recipes/${input}`)
@@ -31,7 +34,7 @@ function SearchRecipes({match})
             <div className='search-recipes'>
                 <div className='recipes-declaration search'>Search results for {input}.</div>
                 <div className='recipes-list'>
-                    {recipes.slice(0, 10).map((recipe, index) => (
+                    {recipes.slice(0, recipeNum).map((recipe, index) => (
                         <div className='recipe' key={index}>
                             <Link to={`/recipes/${recipe.strMeal}`}>
                             <div className='recipe-name'>{recipe.strMeal}</div>
@@ -40,6 +43,13 @@ function SearchRecipes({match})
                         </div>
                     ))}
                 </div>
+                {recipes.length > recipeNum ? (
+                    <div className='button-container'>
+                        <button className='button' onClick={moreRecipesHandler}>More Recipes</button>
+                    </div>
+                ) : (
+                    <></>
+                )}
             </div>
         )}
         </>

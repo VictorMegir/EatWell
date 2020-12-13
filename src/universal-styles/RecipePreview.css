@@ -42,4 +42,18 @@
 .recipes-list .recipe .recipe-image {
   border-radius: 10%;
 }
+
+.button-container {
+  padding-bottom: 25px;
+}
+
+.button-container .button {
+  font-size: 24px;
+  padding: 10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #AFC896;
+  border-radius: 8px;
+}
 /*# sourceMappingURL=RecipePreview.css.map */

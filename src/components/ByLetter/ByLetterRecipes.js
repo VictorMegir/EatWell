@@ -5,18 +5,21 @@ import LoadingPage from '../Pages/LoadingPage';
 
 function RecipesByLetterList({match}) 
 {
-    const [meals, setMeals] = useState([]);
-    const [loading, setLoading] = useState(true);
     const letter = match.params.letter;
-
+    const [recipes, setRecipes] = useState([]);
+    
+    const [loading, setLoading] = useState(true);
     setTimeout(() => setLoading(false), 5000);
+
+    const [recipeNum, setRecipeNum] = useState(10);
+    const moreRecipesHandler = () => setRecipeNum(recipeNum + 10);
 
     useEffect(() => {
         fetch(`/api/letter/${letter}`)
             .then(response => response.json())
             .then(data => {
                 if(data.meals === null) return;
-                setMeals(data.meals);
+                setRecipes(data.meals);
                 setLoading(false)
             });
     }, [letter]);
@@ -25,13 +28,13 @@ function RecipesByLetterList({match})
         <>
         {loading === true ? (
             <LoadingPage />
-        ) : loading === false && meals.length === 0 ? (
+        ) : loading === false && recipes.length === 0 ? (
             <NoRecipes />
         ) : (
             <div className='letter-recipes'>
                 <div className='recipes-declaration search'>Recipes starting with the letter {letter.toUpperCase()}</div>
                 <div className='recipes-list'>
-                    {meals.slice(0, 10).map((meal, index) => (
+                    {recipes.slice(0, recipeNum).map((meal, index) => (
                         <div className='recipe' key={index}>
                             <Link to={`/recipes/${meal.strMeal}`}>
                             <div className={`recipe-${index}`}>
@@ -42,6 +45,13 @@ function RecipesByLetterList({match})
                         </div>
                     ))}
                 </div>
+                {recipes.length > recipeNum ? (
+                    <div className='button-container'>
+                        <button className='button' onClick={moreRecipesHandler}>More Recipes</button>
+                    </div>
+                ) : (
+                    <></>
+                )}
             </div>
         )}
         </>
