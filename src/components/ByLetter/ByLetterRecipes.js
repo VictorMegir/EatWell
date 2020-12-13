@@ -1,24 +1,31 @@
 import React, {useEffect, useState} from 'react';
 import {Link} from 'react-router-dom';
 import NoRecipes from '../Pages/NoRecipes';
+import LoadingPage from '../Pages/LoadingPage';
 
 function RecipesByLetterList({match}) 
 {
     const [meals, setMeals] = useState([]);
+    const [loading, setLoading] = useState(true);
     const letter = match.params.letter;
 
+    setTimeout(() => setLoading(false), 5000);
+
     useEffect(() => {
-        fetch(`https://www.themealdb.com/api/json/v1/1/search.php?f=${letter}`)
-        .then(response => response.json())
-        .then(result => {
-            if(result.meals === null) return;
-            setMeals(result.meals)
-        });
+        fetch(`/api/letter/${letter}`)
+            .then(response => response.json())
+            .then(data => {
+                if(data.meals === null) return;
+                setMeals(data.meals);
+                setLoading(false)
+            });
     }, [letter]);
 
     return(
         <>
-        {meals.length === 0 ? (
+        {loading === true ? (
+            <LoadingPage />
+        ) : loading === false && meals.length === 0 ? (
             <NoRecipes />
         ) : (
             <div className='letter-recipes'>

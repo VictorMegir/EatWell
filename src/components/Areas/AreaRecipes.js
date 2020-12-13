@@ -1,21 +1,31 @@
 import React, { useEffect, useState } from 'react';
 import {Link} from 'react-router-dom';
 import Page404 from '../Pages/Page404';
+import LoadingPage from '../Pages/LoadingPage';
 
 function AreaRecipes({match})
 {
     const area = match.params.area;
     const [recipes, setRecipes] = useState([]);
+    const [loading, setLoading] = useState(true);
+
+    setTimeout(() => setLoading(false));
 
     useEffect(() => {
-        fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?a=${area}`)
-        .then(response => response.json())
-        .then(result => setRecipes(result.meals));
+        fetch(`/api/areas/${area}`)
+            .then(response => response.json())
+            .then(data => {
+                if(data.meals === null) return;
+                setRecipes(data.meals);
+                setLoading(false);
+            });
     }, [area]);
 
     return(
         <>
-        {recipes === null ? (
+        {loading === true ? (
+            <LoadingPage />
+        ) : loading === false && recipes === null ? (
             <Page404 />
         ) : (
             <div className='area-recipes'>

@@ -1,24 +1,31 @@
 import React, { useEffect, useState } from 'react';
 import {Link} from 'react-router-dom';
+import LoadingPage from '../Pages/LoadingPage';
 import NoRecipes from '../Pages/NoRecipes';
 
 function SearchRecipes({match})
 {
+    const [loading, setLoading] = useState(true);
     const [recipes, setRecipes] = useState([]);
     const input = match.params.input;
 
+    setTimeout(() => setLoading(false), 5000);
+
     useEffect(() => {
-        fetch(`/${input}`)
+        fetch(`/api/recipes/${input}`)
             .then(response => response.json())
             .then(data => {
                 if(data.meals === null) return;
-                setRecipes(data.meals)
+                setLoading(false);
+                setRecipes(data.meals);
             });
     }, [input]);
 
     return (
         <>
-        {recipes.length === 0 ? (
+        {loading === true ? (
+            <LoadingPage />
+        ) : loading === false && recipes.length === 0 ? (
             <NoRecipes />
         ) : (
             <div className='search-recipes'>

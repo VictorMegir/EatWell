@@ -10,9 +10,9 @@
   text-decoration: underline;
 }
 
-.about-page div {
-  text-align: left;
+.about-page .content {
   font-size: 24px;
+  text-align: left;
   padding: 25px;
   padding-bottom: 35px;
   overflow: hidden;
@@ -29,7 +29,7 @@
       -ms-flex-align: center;
           align-items: center;
   position: relative;
-  left: 40px;
+  right: 55px;
 }
 
 .about-page .link-images img {

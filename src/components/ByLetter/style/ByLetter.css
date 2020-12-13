@@ -30,7 +30,7 @@
   content: " |";
 }
 
-.letter-list .last-element::after {
+.letter-list li:last-child::after {
   content: none;
 }
 /*# sourceMappingURL=ByLetter.css.map */

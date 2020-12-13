@@ -1,8 +1,9 @@
 {
     "version": 3,
-    "mappings": "AAAA,AAAA,oBAAoB,CAAC;EACjB,UAAU,EAAE,MAAM;EAClB,SAAS,EAAE,IAAI;EACf,WAAW,EAAE,GAAG;EAChB,OAAO,EAAE,IAAI;CAChB;;AAED,AAAA,aAAa,CAAC;EACV,SAAS,EAAE,IAAI;EACf,WAAW,EAAE,GAAG;EAChB,UAAU,EAAE,MAAM;EAClB,cAAc,EAAE,IAAI;CACvB",
+    "mappings": "AAEA,AAAA,oBAAoB,CACpB;ECDI,SAAS,EAAE,IAAI;EACf,WAAW,EDCc,GAAG;ECA5B,UAAU,EAAE,MAAM;EAClB,OAAO,EAAE,IAAI;EACb,eAAe,EAAE,SAAS;EDD1B,eAAe,EAAE,IAAI;CACxB;;AACD,AAAA,aAAa,CACb;EACI,SAAS,EAAE,IAAI;EACf,WAAW,EAAE,GAAG;EAChB,UAAU,EAAE,MAAM;EAClB,cAAc,EAAE,IAAI;CACvB",
     "sources": [
-        "Home.scss"
+        "Home.scss",
+        "../../../universal-styles/PageMixins.scss"
     ],
     "names": [],
     "file": "Home.css"

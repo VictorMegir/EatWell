@@ -1,8 +1,10 @@
 .welcome-declaration {
-  text-align: center;
   font-size: 32px;
   font-weight: 600;
+  text-align: center;
   padding: 25px;
+  text-decoration: underline;
+  text-decoration: none;
 }
 
 .welcome-text {

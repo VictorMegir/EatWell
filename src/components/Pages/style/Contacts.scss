@@ -1,32 +1,13 @@
+@import '../../../universal-styles/PageMixins';
+
 .contacts-page 
 {
-    .contacts-declaration {
-        font-size: 32px;
-        font-weight: 400;
-        text-align: center;
-        padding: 25px;
-        text-decoration: underline;
-    }
+    .contacts-declaration {@include pageDeclaration();}
+    .contact {@include content();}
 
-    div {
-        text-align: left;
-        font-size: 24px;
-        padding: 25px;
-    }
-
-    .link-images {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: relative;
-        right: 55px;
-
-        img {
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
+    .link-images 
+    {
+        @include linkImage();
         .github-image {
             width: 40%;
         }

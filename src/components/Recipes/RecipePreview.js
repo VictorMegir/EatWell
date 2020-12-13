@@ -4,13 +4,13 @@ import {Link} from 'react-router-dom';
 function RecipePreview(props)
 {
     const [thumbnail, setThumbnail] = useState([]);
-    const name = props.name;
+    const recipeName = props.name;
 
     useEffect(() => {
-        fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${name}`)
-        .then(response => response.json())
-        .then(result => setThumbnail(result.meals[0].strMealThumb))
-    }, [name]);
+        fetch(`/api/recipes/${recipeName}`)
+            .then(response => response.json())
+            .then(data => setThumbnail(data.meals[0].strMealThumb))
+    }, [recipeName]);
 
     return(
         <div className='recipe'>

@@ -1,35 +1,19 @@
+@import '../../../universal-styles/PageMixins';
+
 .about-page 
 {
     overflow:hidden;
-
-    .about-declaration {
-        font-size: 32px;
-        font-weight: 400;
-        text-align: center;
-        padding: 25px;
-        text-decoration: underline;
-    }
-
-    div {
-        text-align: left;
-        font-size: 24px;
-        padding: 25px;
+    .about-declaration {@include pageDeclaration();}
+    .content 
+    {
+        @include content();
         padding-bottom: 35px;
         overflow: hidden;
     }
 
-    .link-images {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: relative;
-        left: 40px;
-
-        img {
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-        }
+    .link-images 
+    {
+        @include linkImage();
         .react-image {
             width: 35%;
         }

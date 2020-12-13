@@ -6,9 +6,9 @@
   text-decoration: underline;
 }
 
-.contacts-page div {
-  text-align: left;
+.contacts-page .contact {
   font-size: 24px;
+  text-align: left;
   padding: 25px;
 }
 

@@ -1,4 +1,4 @@
-@import '../../../universal-styles/DetailsMixins';
+@import '../../../universal-styles/ListMixins';
 
 .letter-declaration {@include declaration();}
 .letter-list 
@@ -13,11 +13,11 @@
         &::after {
             content: " |";
         }
-    }
 
-    .last-element {
-        &::after {
-            content: none;
+        &:last-child {
+            &::after {
+                content: none;
+            }
         }
     }
 }

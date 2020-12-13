@@ -7,16 +7,13 @@ import Page404 from '../Pages/Page404';
 function Recipe({match, location})
 {
   const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    setTimeout(() => setLoading(false), 5000)
-  })
-
   const [meal, setMeal] = useState([]);
   const recipeName = match.params.name;
 
+  setTimeout(() => setLoading(false), 5000);
+
   useEffect(() => {
-    fetch(`/${recipeName}`)
+    fetch(`/api/recipes/${recipeName}`)
       .then(response => response.json())
       .then(data => {
         if(data.meals === null) return;
@@ -25,12 +22,12 @@ function Recipe({match, location})
       })
   }, [recipeName]);
 
-  return(
+  return (
     <>
-    {meal.length === 0  && !loading ? (
-      <Page404 />
-    ) : loading === true ? (
+    {loading === true ? (
       <LoadingPage />
+    ) : loading === false && meal.length === 0 ? (
+      <Page404 />
     ) : (
       <div className='Recipe'>
         <div className='name'>{meal.strMeal}</div>
