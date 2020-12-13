@@ -6,19 +6,19 @@ import Page404 from '../Pages/Page404';
 
 function Recipe({match, location})
 {
-  const [loading, setLoading] = useState(true);
-  const [meal, setMeal] = useState([]);
   const recipeName = match.params.name;
+  const [recipe, setRecipe] = useState([]);
 
+  const [loading, setLoading] = useState(true);
   setTimeout(() => setLoading(false), 5000);
 
   useEffect(() => {
-    fetch(`/api/recipes/${recipeName}`)
+    fetch(`/api/recipes/name/${recipeName}`)
       .then(response => response.json())
       .then(data => {
         if(data.meals === null) return;
         setLoading(false);
-        setMeal(data.meals[0]);
+        setRecipe(data.meals[0]);
       })
   }, [recipeName]);
 
@@ -26,49 +26,49 @@ function Recipe({match, location})
     <>
     {loading === true ? (
       <LoadingPage />
-    ) : loading === false && meal.length === 0 ? (
+    ) : loading === false && recipe.length === 0 ? (
       <Page404 />
     ) : (
       <div className='Recipe'>
-        <div className='name'>{meal.strMeal}</div>
+        <div className='name'>{recipe.strMeal}</div>
         <div className='block-content'>
           <div className='image-block'>
-            <img className='image' src={meal.strMealThumb} alt='T_T'></img>
+            <img className='image' src={recipe.strMealThumb} alt='T_T'></img>
             <div className='info'>
-              <div className='tags'>Tags: {meal.strTags}</div>
-              <div className='category'>Category: {meal.strCategory}</div>
-              <div className='youtube-link' ><a href={meal.strYoutube}>Video</a></div>
+              <div className='tags'>Tags: {recipe.strTags}</div>
+              <div className='category'>Category: {recipe.strCategory}</div>
+              <div className='youtube-link' ><a href={recipe.strYoutube}>Video</a></div>
             </div>
           </div>
           <div className='ingredient-block'>
             <div className='ingredients-declaration'>Ingredients</div>
             <ul className='ingredients'>
-              <Ingredient ingredient={meal.strIngredient1} measure={meal.strMeasure1} />
-              <Ingredient ingredient={meal.strIngredient2} measure={meal.strMeasure2} />
-              <Ingredient ingredient={meal.strIngredient3} measure={meal.strMeasure3} />
-              <Ingredient ingredient={meal.strIngredient4} measure={meal.strMeasure4} />
-              <Ingredient ingredient={meal.strIngredient5} measure={meal.strMeasure5} />
-              <Ingredient ingredient={meal.strIngredient6} measure={meal.strMeasure6} />
-              <Ingredient ingredient={meal.strIngredient7} measure={meal.strMeasure7} />
-              <Ingredient ingredient={meal.strIngredient8} measure={meal.strMeasure8} />
-              <Ingredient ingredient={meal.strIngredient9} measure={meal.strMeasure9} />
-              <Ingredient ingredient={meal.strIngredient10} measure={meal.strMeasure10} />
-              <Ingredient ingredient={meal.strIngredient11} measure={meal.strMeasure11} />
-              <Ingredient ingredient={meal.strIngredient12} measure={meal.strMeasure12} />
-              <Ingredient ingredient={meal.strIngredient13} measure={meal.strMeasure13} />
-              <Ingredient ingredient={meal.strIngredient14} measure={meal.strMeasure14} />
-              <Ingredient ingredient={meal.strIngredient15} measure={meal.strMeasure15} />
-              <Ingredient ingredient={meal.strIngredient16} measure={meal.strMeasure16} />
-              <Ingredient ingredient={meal.strIngredient17} measure={meal.strMeasure17} />
-              <Ingredient ingredient={meal.strIngredient18} measure={meal.strMeasure18} />
-              <Ingredient ingredient={meal.strIngredient19} measure={meal.strMeasure19} />
-              <Ingredient ingredient={meal.strIngredient20} measure={meal.strMeasure20} />
+              <Ingredient ingredient={recipe.strIngredient1} measure={recipe.strMeasure1} />
+              <Ingredient ingredient={recipe.strIngredient2} measure={recipe.strMeasure2} />
+              <Ingredient ingredient={recipe.strIngredient3} measure={recipe.strMeasure3} />
+              <Ingredient ingredient={recipe.strIngredient4} measure={recipe.strMeasure4} />
+              <Ingredient ingredient={recipe.strIngredient5} measure={recipe.strMeasure5} />
+              <Ingredient ingredient={recipe.strIngredient6} measure={recipe.strMeasure6} />
+              <Ingredient ingredient={recipe.strIngredient7} measure={recipe.strMeasure7} />
+              <Ingredient ingredient={recipe.strIngredient8} measure={recipe.strMeasure8} />
+              <Ingredient ingredient={recipe.strIngredient9} measure={recipe.strMeasure9} />
+              <Ingredient ingredient={recipe.strIngredient10} measure={recipe.strMeasure10} />
+              <Ingredient ingredient={recipe.strIngredient11} measure={recipe.strMeasure11} />
+              <Ingredient ingredient={recipe.strIngredient12} measure={recipe.strMeasure12} />
+              <Ingredient ingredient={recipe.strIngredient13} measure={recipe.strMeasure13} />
+              <Ingredient ingredient={recipe.strIngredient14} measure={recipe.strMeasure14} />
+              <Ingredient ingredient={recipe.strIngredient15} measure={recipe.strMeasure15} />
+              <Ingredient ingredient={recipe.strIngredient16} measure={recipe.strMeasure16} />
+              <Ingredient ingredient={recipe.strIngredient17} measure={recipe.strMeasure17} />
+              <Ingredient ingredient={recipe.strIngredient18} measure={recipe.strMeasure18} />
+              <Ingredient ingredient={recipe.strIngredient19} measure={recipe.strMeasure19} />
+              <Ingredient ingredient={recipe.strIngredient20} measure={recipe.strMeasure20} />
             </ul>
           </div>
         </div>
         <div className='instructions-block'>
           <div className='instructions-declation'>Instructions</div>
-          <div className='instructions'>{meal.strInstructions}</div>
+          <div className='instructions'>{recipe.strInstructions}</div>
         </div>
       </div>
     )}

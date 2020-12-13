@@ -8,11 +8,10 @@ function AreasList()
 {      
     const [areas, setAreas] = useState([]);
     const [loading, setLoading] = useState(true);
-
     setTimeout(() => setLoading(false), 5000);
     
     useEffect(() => {
-        fetch('https://www.themealdb.com/api/json/v1/1/list.php?a=list')
+        fetch('/api/areas/')
             .then(response => response.json())
             .then(data => {
                 if(data.meals === null) return;

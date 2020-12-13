@@ -15,7 +15,7 @@ function SearchRecipes({match})
     const moreRecipesHandler = () => setRecipeNum(recipeNum + 10);
 
     useEffect(() => {
-        fetch(`/api/recipes/${input}`)
+        fetch(`/api/recipes/name/${input}`)
             .then(response => response.json())
             .then(data => {
                 if(data.meals === null) return;

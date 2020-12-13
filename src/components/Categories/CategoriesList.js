@@ -6,21 +6,30 @@ import Page404 from '../Pages/Page404';
 
 function Categories()
 {
-    const [loading, setLoading] = useState(true);
     const [categories, setCategories] = useState([]);
-
+    const [loading, setLoading] = useState(true);
     setTimeout(() => setLoading(false), 5000);
 
     useEffect(() => {
         fetch('/api/categories')
             .then(response => response.json())
             .then(data => {
-                if(data.meals === null) return;
+                if(data.categories === null) return;
                 setCategories(data.categories);
                 setLoading(false);
             })
     }, [])
     
+    /*
+    category.strCategory
+    const clickHandler = ((categoryName) => {
+        localStorage.clear();
+        localStorage.setItem("category", categoryName);
+    });
+    */
+
+   /*<Link to="route" target="_blank" onClick={(event) => {event.preventDefault(); window.open(this.makeHref("route"));}} />*/
+
     return (
         <>
         {loading === true ? (
@@ -32,7 +41,7 @@ function Categories()
                 <div className='categories-declaration'>Search by Category</div>
                 <div className='categories-list'>
                     {categories.map((category, index) => (
-                        <div className={`category`} key={index}>
+                        <div className='category' key={index}>
                             <Link to={
                                 {
                                     pathname: `/categories/${category.strCategory}`,

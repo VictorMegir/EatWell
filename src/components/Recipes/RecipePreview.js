@@ -1,24 +1,41 @@
 import React, { useEffect, useState } from 'react';
 import {Link} from 'react-router-dom';
+import LoadingPage from '../Pages/LoadingPage';
+import Page404 from '../Pages/Page404';
 
 function RecipePreview(props)
 {
-    const [thumbnail, setThumbnail] = useState([]);
     const recipeName = props.name;
+    const [recipe, setRecipe] = useState([]);
+
+    const [loading, setLoading] = useState(true);
+    setTimeout(() => setLoading(false), 5000);
 
     useEffect(() => {
-        fetch(`/api/recipes/${recipeName}`)
+        fetch(`/api/recipes/name/${recipeName}`)
             .then(response => response.json())
-            .then(data => setThumbnail(data.meals[0].strMealThumb))
+            .then(data => {
+                if(data.meals === null) return;
+                setRecipe(data.meals[0])
+                setLoading(false);
+            })
     }, [recipeName]);
 
     return(
-        <div className='recipe'>
-            <Link to={`/recipes/${props.name}`}>
-            <div className='recipe-name'>{props.name}</div>
-            <img className='recipe-image' src={thumbnail} alt='T_T'/>
-            </Link>
-        </div>
+        <>
+        {loading === true ? (
+            <LoadingPage />
+        ) : loading === false && recipe.length === 0 ? (
+            <Page404 />
+        ) : (
+            <div className='recipe'>
+                <Link to={`/recipes/name/${recipeName}`}>
+                <div className='recipe-name'>{recipeName}</div>
+                <img className='recipe-image' src={recipe.strMealThumb} alt='T_T'/>
+                </Link>
+            </div>
+        )}
+        </>
     );
 }
 

@@ -27,7 +27,7 @@ function App()
           <Route path='/' exact component={Home}/>
           <Route path='/about' exact component={About}/>
           <Route path='/contacts' exact component={Constacts}/>
-          <Route path='/recipes/:name' exact component={RecipeDetails}/>
+          <Route path='/recipes/name/:name' exact component={RecipeDetails}/>
           <Route path='/recipes/search/:input' exact component={SearchRecipes} />
           <Route path='/categories/:name' exact component={CategoryDetails} />
           <Route path='/categories/letter/:letter' exact component={ByLetterRecipes} />
