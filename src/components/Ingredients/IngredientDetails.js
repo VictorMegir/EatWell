@@ -1,20 +1,42 @@
 import './style/IngredientDetails.css';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import IngredientRecipes from './IngredientRecipes';
 import Page404 from '../Pages/Page404';
+import LoadingPage from '../Pages/LoadingPage';
 
-function IngredientDetails({match, location})
+function IngredientDetails({location})
 {
-    const ingredient = location.state.ingredient;
+    const ingredientName = location.pathname.split('/')[2];
+    const [ingredient, setIngredient] = useState([]);
+    
+    const [loading, setLoading] = useState(true);
+    setTimeout(() => setLoading(false), 5000);
 
+    useEffect(() => {
+        fetch(`/api/ingredients/`)
+            .then(resposne => resposne.json())
+            .then(data => {
+                if(data.meals === null) return;
+                for(var i = 0; i < data.meals.length; i++)
+                {
+                    if(data.meals[i].strIngredient === ingredientName) {
+                        setIngredient(data.meals[i]);
+                    }
+                }
+                setLoading(false);
+            });
+    }, [ingredientName]);
+    
     return (
         <>
-        {location.state === undefined ? (
+        {loading === true ? (
+            <LoadingPage />
+        ) : loading === false && ingredient === null ? (
             <Page404 />
         ) : (
             <div className='ingredient-page'>
                 <div className='ingredient-name'>{ingredient.strIngredient}</div>
-                <img className='ingredient-image' src={`https://www.themealdb.com/images/ingredients/${ingredient.strIngredient}.png`} alt='T_T' />
+                <img className='ingredient-image' src={`https://www.themealdb.com/images/ingredients/${ingredientName}.png`} alt='T_T' />
                 <p className='ingredient-description'>{ingredient.strDescription}</p>
                 <IngredientRecipes ingredient={ingredient.strIngredient}/>
             </div>

@@ -15,7 +15,7 @@ function IngredientsList()
     const moreIngredientsHandler = () => setIngredientsNum(ingredientsNum + 10);
 
     useEffect(() => {
-        fetch(`/api/ingredients/list`)
+        fetch(`/api/ingredients/`)
             .then(response => response.json())
             .then(data => {
                 if(data.meals === null) return;
@@ -36,11 +36,7 @@ function IngredientsList()
                 <div className='ingredient-list'>
                     {ingredients.slice(0, ingredientsNum).map((ingredient, index) => (
                         <div className='ingredient' key={index}>
-                            <Link to={
-                                {
-                                    pathname: `/ingredients/${ingredient.strIngredient}`,
-                                    state: {ingredient}
-                                }}>                            
+                            <Link to={`/ingredients/${ingredient.strIngredient}`}>
                                 <img className='ingredient-thumbnail' src={`https://www.themealdb.com/images/ingredients/${ingredient.strIngredient}.png`} alt='T_T'/>
                                 <div className='ingredient-name'>{ingredient.strIngredient}</div>
                             </Link>

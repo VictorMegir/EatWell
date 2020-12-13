@@ -18,17 +18,7 @@ function Categories()
                 setCategories(data.categories);
                 setLoading(false);
             })
-    }, [])
-    
-    /*
-    category.strCategory
-    const clickHandler = ((categoryName) => {
-        localStorage.clear();
-        localStorage.setItem("category", categoryName);
-    });
-    */
-
-   /*<Link to="route" target="_blank" onClick={(event) => {event.preventDefault(); window.open(this.makeHref("route"));}} />*/
+    }, []);
 
     return (
         <>
@@ -42,11 +32,7 @@ function Categories()
                 <div className='categories-list'>
                     {categories.map((category, index) => (
                         <div className='category' key={index}>
-                            <Link to={
-                                {
-                                    pathname: `/categories/${category.strCategory}`,
-                                    state: {category}
-                                }}>
+                            <Link to={`/categories/${category.strCategory}`}>
                                 <img className='category-thumbnail' src={category.strCategoryThumb} alt='T_T'/>
                                 <div className='category-name'>{category.strCategory}</div>
                             </Link>
