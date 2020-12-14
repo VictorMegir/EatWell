@@ -15,7 +15,8 @@ function IngredientsList()
     const moreIngredientsHandler = () => setIngredientsNum(ingredientsNum + 10);
 
     useEffect(() => {
-        fetch(`/api/ingredients/`)
+        //fetch(`/api/ingredients/`)
+        fetch(`https://www.themealdb.com/api/json/v1/1/list.php?i=list`)
             .then(response => response.json())
             .then(data => {
                 if(data.meals === null) return;

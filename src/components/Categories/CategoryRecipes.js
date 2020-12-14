@@ -15,7 +15,8 @@ function CategoryRecipes(props)
     const moreRecipesHandler = () => setRecipeNum(recipeNum + 10);
 
     useEffect(() => {
-        fetch(`/api/categories/${category}`)
+        //fetch(`/api/categories/${category}`)
+        fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?c=${category}`)
             .then(response => response.json())
             .then(data => {
                 if(data.meals === null) return;

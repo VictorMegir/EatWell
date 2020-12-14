@@ -1,0 +1,30 @@
+[debug] [2020-12-14T21:28:30.056Z] ----------------------------------------------------------------------
+[debug] [2020-12-14T21:28:30.058Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\me\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2020-12-14T21:28:30.058Z] CLI Version:   8.19.0
+[debug] [2020-12-14T21:28:30.058Z] Platform:      win32
+[debug] [2020-12-14T21:28:30.058Z] Node Version:  v14.15.0
+[debug] [2020-12-14T21:28:30.059Z] Time:          Mon Dec 14 2020 23:28:30 GMT+0200 (Eastern European Standard Time)
+[debug] [2020-12-14T21:28:30.059Z] ----------------------------------------------------------------------
+[debug] [2020-12-14T21:28:30.059Z] 
+[debug] [2020-12-14T21:28:30.066Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-12-14T21:28:30.067Z] > authorizing via signed-in user
+[debug] [2020-12-14T21:28:30.067Z] [iam] checking project eatwell-5e966 for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2020-12-14T21:28:30.070Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/eatwell-5e966:testIamPermissions  
+ {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2020-12-14T21:28:30.477Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Mon, 14 Dec 2020 21:28:30 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=116","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-12-14T21:28:30.479Z] >>> HTTP REQUEST POST https://iam.googleapis.com/v1/projects/eatwell-5e966/serviceAccounts/eatwell-5e966@appspot.gserviceaccount.com:testIamPermissions  
+ {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2020-12-14T21:28:30.893Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Mon, 14 Dec 2020 21:28:30 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-12-14T21:28:30.894Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/eatwell-5e966  
+ 
+[debug] [2020-12-14T21:28:31.345Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Mon, 14 Dec 2020 21:28:31 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-12-14T21:28:31.597Z] TypeError [ERR_INVALID_ARG_TYPE]: The "path" argument must be of type string. Received undefined
+    at validateString (internal/validators.js:124:11)
+    at Object.join (path.js:375:7)
+    at Object.checkFunctionsSDKVersion [as fn] (C:\Users\me\AppData\Roaming\npm\node_modules\firebase-tools\lib\checkFirebaseSDKVersion.js:34:28)
+    at Command.<anonymous> (C:\Users\me\AppData\Roaming\npm\node_modules\firebase-tools\lib\command.js:170:30)
+    at Generator.next (<anonymous>)
+    at fulfilled (C:\Users\me\AppData\Roaming\npm\node_modules\firebase-tools\lib\command.js:5:58)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+[error] 
+[error] Error: An unexpected error has occurred.

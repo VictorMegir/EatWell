@@ -15,7 +15,8 @@ function SearchRecipes({match})
     const moreRecipesHandler = () => setRecipeNum(recipeNum + 10);
 
     useEffect(() => {
-        fetch(`/api/recipes/name/${input}`)
+        //fetch(`/api/recipes/name/${input}`)
+        fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${input}`)
             .then(response => response.json())
             .then(data => {
                 if(data.meals === null) return;

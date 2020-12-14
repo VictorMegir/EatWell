@@ -12,7 +12,8 @@ function RecipePreview(props)
     setTimeout(() => setLoading(false), 5000);
 
     useEffect(() => {
-        fetch(`/api/recipes/name/${recipeName}`)
+        //fetch(`/api/recipes/name/${recipeName}`)
+        fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${recipeName}`)
             .then(response => response.json())
             .then(data => {
                 if(data.meals === null) return;

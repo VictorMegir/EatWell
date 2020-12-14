@@ -13,7 +13,8 @@ function IngredientDetails({location})
     setTimeout(() => setLoading(false), 5000);
 
     useEffect(() => {
-        fetch(`/api/ingredients/`)
+        //fetch(`/api/ingredients/`)
+        fetch(`https://www.themealdb.com/api/json/v1/1/list.php?i=list`)
             .then(resposne => resposne.json())
             .then(data => {
                 if(data.meals === null) return;

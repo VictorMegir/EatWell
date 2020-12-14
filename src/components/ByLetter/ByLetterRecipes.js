@@ -15,7 +15,8 @@ function RecipesByLetterList({match})
     const moreRecipesHandler = () => setRecipeNum(recipeNum + 10);
 
     useEffect(() => {
-        fetch(`/api/letter/${letter}`)
+        //fetch(`/api/letter/${letter}`)
+        fetch(`https://www.themealdb.com/api/json/v1/1/search.php?f=${letter}`)
             .then(response => response.json())
             .then(data => {
                 if(data.meals === null) return;

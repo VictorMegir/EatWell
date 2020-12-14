@@ -11,7 +11,8 @@ function Recipe({match})
   setTimeout(() => setLoading(false), 5000);
 
   useEffect(() => {
-    fetch(`/api/recipes/id/${match.params.id}`)
+    //fetch(`/api/recipes/id/${match.params.id}`)
+    fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${match.params.id}`)
       .then(response => response.json())
       .then(data => {
         if(data.meals === null) return;

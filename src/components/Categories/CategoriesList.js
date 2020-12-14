@@ -11,7 +11,8 @@ function Categories()
     setTimeout(() => setLoading(false), 5000);
 
     useEffect(() => {
-        fetch('/api/categories')
+        //fetch('/api/categories')
+        fetch(`https://www.themealdb.com/api/json/v1/1/categories.php`)
             .then(response => response.json())
             .then(data => {
                 if(data.categories === null) return;
