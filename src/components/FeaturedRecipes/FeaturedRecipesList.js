@@ -1,6 +1,6 @@
 import React from 'react';
 import RandomRecipe from '../RandomRecipes/RandomRecipe'
-import Recipe from '../Recipes/RecipePreview';
+import Recipe from '../Recipes/RecipeByName';
 
 function FeaturedRecipesList()
 {
