@@ -36,7 +36,7 @@ function IngredientRecipes(props)
                 <div className='recipes-list'>
                     {recipes.slice(0, recipeNum).map((recipe, index) => (
                         <div className='recipe' key={index}>
-                            <Link to={`/recipes/name/${recipe.strMeal}`}>
+                            <Link to={`/recipes/id/${recipe.idMeal}`}>
                             <div className='recipe-name'>{recipe.strMeal}</div>
                             <img className='recipe-image' src={recipe.strMealThumb} alt='T_T'/>
                             </Link>

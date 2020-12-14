@@ -8,8 +8,8 @@ import Nav from './components/Nav/Nav';
 import Home from './components/Pages/Home';
 import About from './components/Pages/About';
 import Constacts from './components/Pages/Contacts';
-import RecipeDetails from './components/Recipes/RecipeDetails';
 import SearchRecipes from './components/Recipes/SearchRecipes';
+import RecipeDetails from './components/Recipes/RecipeDetails';
 import CategoryDetails from './components/Categories/CategoryDetails';
 import IngredientDetails from './components/Ingredients/IngredientDetails';
 import ByLetterRecipes from './components/ByLetter/ByLetterRecipes';
@@ -27,6 +27,7 @@ function App()
           <Route path='/' exact component={Home}/>
           <Route path='/about' exact component={About}/>
           <Route path='/contacts' exact component={Constacts}/>
+          <Route path='/recipes/id/:id' exact component={RecipeDetails}/>
           <Route path='/recipes/name/:name' exact component={RecipeDetails}/>
           <Route path='/recipes/search/:input' exact component={SearchRecipes} />
           <Route path='/categories/:name' exact component={CategoryDetails} />

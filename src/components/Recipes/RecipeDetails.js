@@ -4,23 +4,21 @@ import Ingredient from './VisibleIngredient';
 import LoadingPage from '../Pages/LoadingPage';
 import Page404 from '../Pages/Page404';
 
-function Recipe({match, location})
+function Recipe({match})
 {
-  const recipeName = match.params.name;
   const [recipe, setRecipe] = useState([]);
-
   const [loading, setLoading] = useState(true);
   setTimeout(() => setLoading(false), 5000);
 
   useEffect(() => {
-    fetch(`/api/recipes/name/${recipeName}`)
+    fetch(`/api/recipes/id/${match.params.id}`)
       .then(response => response.json())
       .then(data => {
         if(data.meals === null) return;
         setLoading(false);
         setRecipe(data.meals[0]);
       })
-  }, [recipeName]);
+    }, [match]);
 
   return (
     <>

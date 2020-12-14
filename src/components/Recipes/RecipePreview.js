@@ -29,7 +29,7 @@ function RecipePreview(props)
             <Page404 />
         ) : (
             <div className='recipe'>
-                <Link to={`/recipes/name/${recipeName}`}>
+                <Link to={`/recipes/id/${recipe.idMeal}`}>
                 <div className='recipe-name'>{recipeName}</div>
                 <img className='recipe-image' src={recipe.strMealThumb} alt='T_T'/>
                 </Link>

@@ -36,7 +36,7 @@ function RecipesByLetterList({match})
                 <div className='recipes-list'>
                     {recipes.slice(0, recipeNum).map((meal, index) => (
                         <div className='recipe' key={index}>
-                            <Link to={`/recipes/name/${meal.strMeal}`}>
+                            <Link to={`/recipes/id/${meal.idMeal}`}>
                             <div className={`recipe-${index}`}>
                                 <div className='recipe-name'>{meal.strMeal}</div>
                                 <img className='recipe-image' src={meal.strMealThumb} alt='T_T'/>
