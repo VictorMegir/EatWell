@@ -7,5 +7,5 @@ This application uses the web api of <a href='https://www.themealdb.com/'>TheMea
 ## Tools
 The application was built with React.js utilizing the Hooks interface as well the Router interface.<br>
 For the calls to TheMealDB.com api, the application uses node.js package node-fetch .<br>
-Styling was done using SASS.
+Styling was done using SASS.<br>
 Deployment was done using Firebase.
