@@ -10,7 +10,7 @@ function Home()
 {
     return(
         <div className='home-page'>
-            <div className='welcome-declaration'>Welcome to EatWell.com</div>
+            <div className='welcome-declaration'>Welcome to EatWell</div>
             <p className='welcome-text'>
                 Need an idea for a recipe?<br/>
                 Check our top recipes or search for one you like, based on the <a href='#category'>category</a>, the <a href='#ingredients'>ingredients</a> or the <a href='#country'>country</a> of origin.
