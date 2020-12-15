@@ -22,14 +22,12 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  position: relative;
-  right: 55px;
 }
 
 .about-page .link-images img {
@@ -38,7 +36,7 @@
   margin-right: auto;
 }
 
-.about-page .link-images .react-image {
-  width: 35%;
+.about-page .link-images img {
+  width: 30vh;
 }
 /*# sourceMappingURL=About.css.map */

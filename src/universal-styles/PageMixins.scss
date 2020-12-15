@@ -10,10 +10,8 @@
 @mixin linkImage()
 {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
-    position: relative;
-    right: 55px;
 
     img {
         display: block;

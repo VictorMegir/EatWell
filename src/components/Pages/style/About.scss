@@ -14,8 +14,6 @@
     .link-images 
     {
         @include linkImage();
-        .react-image {
-            width: 35%;
-        }
+        img {width: 30vh;}
     }
 }

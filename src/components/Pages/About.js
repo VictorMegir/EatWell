@@ -2,6 +2,8 @@ import './style/About.css';
 import React from 'react';
 import mealdbImage from './images/TheMealDB-image.png';
 import reactImage from './images/React-image.png';
+import firebaseImage from './images/Firebase-image.png';
+
 function About() 
 {
     return(
@@ -14,6 +16,7 @@ function About()
             <div className='link-images'>
                 <a href='https://www.themealdb.com/'><img src={mealdbImage} className='mealdb-image' alt='T_T' /></a>
                 <a href='https://reactjs.org/'><img src={reactImage} className='react-image' alt='T_T' /></a>
+                <a href='https://firebase.google.com/'><img src={firebaseImage} className='firebase-image' alt='T_T' /></a>
             </div>
         </div>
     )
