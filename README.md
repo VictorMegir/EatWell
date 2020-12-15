@@ -9,3 +9,6 @@ The application was built with React.js utilizing the Hooks interface as well th
 For the calls to TheMealDB.com api, the application uses node.js package node-fetch .<br>
 Styling was done using SASS.<br>
 Deployment was done using Firebase.
+
+### Credits
+This application was made possible thanks to the educational content made by user <a href='https://github.com/developedbyed/'>Simo Edwin</a> from the YouTube channel <a href='https://www.youtube.com/channel/UClb90NQQcskPUGDIXsQEz5Q'>Dev Ed</a>.
