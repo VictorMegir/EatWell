@@ -1,4 +1,4 @@
-# Ghostling
+# EatWell
 A React.js application of a recipe website. Visit the website here https://eatwell-5e966.firebaseapp.com/ or the web app version here https://eatwell-5e966.web.app/.
 
 ## TheMealDB.com
